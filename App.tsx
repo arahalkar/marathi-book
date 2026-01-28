@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { extractChapters, processTopicDetail, generateGrandQuiz, generateGrandFlashcards } from './services/geminiService';
-import { CourseData, AppView, Topic, Question, Flashcard } from './types';
+import { CourseData, AppView, Topic } from './types';
 import { PRELOADED_COURSE } from './preloadedData';
 import FlashcardItem from './components/FlashcardItem';
 import QuizGame from './components/QuizGame';
@@ -9,13 +8,11 @@ import QuizGame from './components/QuizGame';
 const App: React.FC = () => {
   const [view, setView] = useState<AppView>('upload');
   const [isLoading, setIsLoading] = useState(false);
-  const [loadingMessage, setLoadingMessage] = useState("");
   const [courseData, setCourseData] = useState<CourseData | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [quizComplete, setQuizComplete] = useState<{score: number, total: number} | null>(null);
-  const [fileData, setFileData] = useState<{base64: string, mime: string} | null>(null);
 
-  // Initialize App: Check for Pre-loaded data or LocalStorage
+  // Initialize App: Directly load pre-loaded data if available
   useEffect(() => {
     if (PRELOADED_COURSE) {
       setCourseData(PRELOADED_COURSE);
@@ -32,20 +29,13 @@ const App: React.FC = () => {
         }
       }
     }
-  }, [PRELOADED_COURSE]);
+  }, []);
 
-  // Persist course data whenever it changes (only if not using pre-loaded data)
-  useEffect(() => {
-    if (courseData && !PRELOADED_COURSE) {
-      localStorage.setItem('marathi_mitr_cache', JSON.stringify(courseData));
-    }
-  }, [courseData, PRELOADED_COURSE]);
-
-  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
-    // Handle JSON imports (Pre-processed courses)
+    // In static mode, we only allow importing previously exported JSON course data
     if (file.type === 'application/json' || file.name.endsWith('.json')) {
       const reader = new FileReader();
       reader.onload = (e) => {
@@ -53,96 +43,41 @@ const App: React.FC = () => {
           const json = JSON.parse(e.target?.result as string);
           setCourseData(json);
           setView('dashboard');
+          localStorage.setItem('marathi_mitr_cache', JSON.stringify(json));
         } catch (err) {
           alert("Invalid Course JSON file.");
         }
       };
       reader.readAsText(file);
-      return;
-    }
-
-    // Handle PDF/Image processing
-    setIsLoading(true);
-    setLoadingMessage("Scanning Table of Contents...");
-    try {
-      const reader = new FileReader();
-      reader.onload = async () => {
-        const base64 = (reader.result as string).split(',')[1];
-        setFileData({ base64, mime: file.type });
-        const data = await extractChapters(base64, file.type);
-        setCourseData({
-          title: data.title,
-          topics: data.topics.map(t => ({ ...t, isLoaded: false }))
-        });
-        setView('dashboard');
-        setIsLoading(false);
-      };
-      reader.readAsDataURL(file);
-    } catch (error) {
-      console.error(error);
-      alert("Failed to process book. Please ensure the file is valid.");
-      setIsLoading(false);
+    } else {
+      alert("AI Processing is disabled. Please upload a pre-processed .json course file or use the built-in curriculum.");
     }
   };
 
-  const navigateToTopic = async (topic: Topic) => {
+  const navigateToTopic = (topic: Topic) => {
     if (!courseData) return;
-
     if (!topic.isLoaded) {
-      // If the data isn't in the preloaded object, we need the original file to process it
-      if (!fileData && !PRELOADED_COURSE) {
-        alert("Original book file is required to generate new chapter content. Please re-upload the PDF.");
-        setView('upload');
-        return;
-      }
-
-      setIsLoading(true);
-      setLoadingMessage(`Generating content for ${topic.title}...`);
-      try {
-        const details = await processTopicDetail(fileData?.base64 || '', fileData?.mime || '', topic.title);
-        const updatedTopics = courseData.topics.map(t => 
-          t.id === topic.id ? { ...t, ...details, isLoaded: true } : t
-        );
-        const updatedCourse = { ...courseData, topics: updatedTopics };
-        setCourseData(updatedCourse);
-        setSelectedTopic(updatedCourse.topics.find(t => t.id === topic.id) || null);
-      } catch (err) {
-        alert("Topic loading failed. Please check your connection.");
-      } finally {
-        setIsLoading(false);
-      }
-    } else {
-      setSelectedTopic(topic);
+      alert("This chapter content is not yet available in the static data.");
+      return;
     }
+    setSelectedTopic(topic);
     setView('topic');
     setQuizComplete(null);
   };
 
-  const startGrandQuiz = async () => {
-    if (!courseData) return;
-    if (!courseData.grandQuiz) {
-      if (!fileData && !PRELOADED_COURSE) { alert("Context required to generate the Grand Quiz."); return; }
-      setIsLoading(true);
-      setLoadingMessage("Generating 25 Grand Questions...");
-      try {
-        const quiz = await generateGrandQuiz(fileData?.base64 || '', fileData?.mime || '');
-        setCourseData({ ...courseData, grandQuiz: quiz });
-      } catch (err) { alert("Failed."); } finally { setIsLoading(false); }
+  const startGrandQuiz = () => {
+    if (!courseData || !courseData.grandQuiz) {
+      alert("Grand Quiz data is missing in this course.");
+      return;
     }
     setView('grand-quiz');
     setQuizComplete(null);
   };
 
-  const startGrandFlashcards = async () => {
-    if (!courseData) return;
-    if (!courseData.grandFlashcards) {
-      if (!fileData && !PRELOADED_COURSE) { alert("Context required for Grand Flashcards."); return; }
-      setIsLoading(true);
-      setLoadingMessage("Creating 25 Grand Flashcards...");
-      try {
-        const cards = await generateGrandFlashcards(fileData?.base64 || '', fileData?.mime || '');
-        setCourseData({ ...courseData, grandFlashcards: cards });
-      } catch (err) { alert("Failed."); } finally { setIsLoading(false); }
+  const startGrandFlashcards = () => {
+    if (!courseData || !courseData.grandFlashcards) {
+      alert("Grand Flashcard data is missing in this course.");
+      return;
     }
     setView('grand-flashcards');
   };
@@ -157,16 +92,16 @@ const App: React.FC = () => {
     a.click();
   };
 
-  const handleQuizComplete = (score: number, total: number) => {
-    setQuizComplete({ score, total });
-  };
-
   const resetApp = () => {
-    if (confirm("Reset everything? This will clear all curriculum data.")) {
+    if (confirm("Reset everything? This will clear any imported curriculum data.")) {
       localStorage.removeItem('marathi_mitr_cache');
-      setCourseData(null);
-      setFileData(null);
-      setView('upload');
+      if (PRELOADED_COURSE) {
+        setCourseData(PRELOADED_COURSE);
+        setView('dashboard');
+      } else {
+        setCourseData(null);
+        setView('upload');
+      }
     }
   };
 
@@ -175,7 +110,7 @@ const App: React.FC = () => {
       <div className="min-h-screen bg-orange-50 flex flex-col items-center justify-center p-6 text-center">
         <div className="w-24 h-24 border-8 border-orange-200 border-t-orange-500 rounded-full animate-spin mb-8"></div>
         <h2 className="text-3xl font-bold text-orange-800 mb-2">Marathi Mitr</h2>
-        <p className="text-orange-600 max-w-md font-medium text-lg">{loadingMessage}</p>
+        <p className="text-orange-600 max-w-md font-medium text-lg">Loading Content...</p>
       </div>
     );
   }
@@ -205,7 +140,7 @@ const App: React.FC = () => {
                 <i className="fas fa-download"></i>
               </button>
               {!PRELOADED_COURSE && (
-                <button onClick={resetApp} title="Reset and Start New" className="text-gray-400 hover:text-red-500 p-2 transition-colors">
+                <button onClick={resetApp} title="Reset App" className="text-gray-400 hover:text-red-500 p-2 transition-colors">
                   <i className="fas fa-trash-alt"></i>
                 </button>
               )}
@@ -215,19 +150,19 @@ const App: React.FC = () => {
       </header>
 
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
-        {view === 'upload' && !PRELOADED_COURSE && (
+        {view === 'upload' && !courseData && (
           <div className="max-w-3xl mx-auto text-center mt-12 animate-fade-in">
             <h2 className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">Your Digital Marathi Tutor</h2>
-            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">Upload your textbook PDF to begin, or import a previously exported Course JSON.</p>
+            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">Static version: Import a Course JSON to begin.</p>
             
             <div className="bg-white border-4 border-dashed border-orange-200 rounded-3xl p-16 hover:border-orange-400 transition-all cursor-pointer relative group shadow-sm hover:shadow-md">
-              <input type="file" accept="application/pdf,image/*,application/json" onChange={handleFileUpload} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
+              <input type="file" accept="application/json" onChange={handleFileUpload} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
               <div className="flex flex-col items-center">
                 <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center text-orange-500 mb-6 group-hover:scale-110 transition-transform shadow-inner">
-                  <i className="fas fa-file-pdf text-4xl"></i>
+                  <i className="fas fa-file-code text-4xl"></i>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">Upload Textbook or Course File</h3>
-                <p className="text-gray-500 text-lg">Drop your PDF here or click to browse</p>
+                <h3 className="text-2xl font-bold text-gray-800 mb-2">Import Course JSON</h3>
+                <p className="text-gray-500 text-lg">Click to browse your files</p>
               </div>
             </div>
           </div>
@@ -251,7 +186,7 @@ const App: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-800 mb-3 marathi-font group-hover:text-orange-600 transition-colors leading-snug">{topic.title}</h3>
                   <p className="text-gray-400 text-sm mt-auto font-medium">
-                    {topic.isLoaded ? 'Ready to Study' : 'Click to generate'}
+                    {topic.isLoaded ? 'Study Now' : 'Content Missing'}
                   </p>
                 </div>
               ))}
@@ -297,7 +232,7 @@ const App: React.FC = () => {
                       <button onClick={() => setQuizComplete(null)} className="bg-orange-500 text-white px-10 py-4 rounded-2xl font-bold hover:bg-orange-600 transition-all shadow-lg hover:scale-105 active:scale-95">Retry</button>
                     </div>
                   ) : (
-                    <QuizGame title="Practice Quiz" questions={selectedTopic.practiceQuestions || []} onComplete={(score) => handleQuizComplete(score, selectedTopic.practiceQuestions?.length || 0)} />
+                    <QuizGame title="Practice Quiz" questions={selectedTopic.practiceQuestions || []} onComplete={(score) => setQuizComplete({score, total: selectedTopic.practiceQuestions?.length || 0})} />
                   )}
                 </div>
               </div>
@@ -332,7 +267,7 @@ const App: React.FC = () => {
                 </div>
               </div>
             ) : (
-              <QuizGame title="Full Mastery Quiz" questions={courseData.grandQuiz || []} onComplete={(score) => handleQuizComplete(score, courseData.grandQuiz?.length || 0)} />
+              <QuizGame title="Full Mastery Quiz" questions={courseData.grandQuiz || []} onComplete={(score) => setQuizComplete({score, total: courseData.grandQuiz?.length || 0})} />
             )}
           </div>
         )}
@@ -344,7 +279,7 @@ const App: React.FC = () => {
             </button>
             <div className="flex justify-between items-end mb-16">
               <h2 className="text-5xl font-black text-gray-900 mb-4">Course Flashcards</h2>
-              <div className="bg-orange-500 text-white px-8 py-4 rounded-[2rem] font-black text-2xl shadow-xl">25 Cards</div>
+              <div className="bg-orange-500 text-white px-8 py-4 rounded-[2rem] font-black text-2xl shadow-xl">{courseData.grandFlashcards?.length} Cards</div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {(courseData.grandFlashcards || []).map(card => <FlashcardItem key={card.id} card={card} />)}
