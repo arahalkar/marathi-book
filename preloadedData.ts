@@ -1,5 +1,5 @@
 
-import { CourseData } from './types';
+import { CourseData, Difficulty } from './types';
 
 /**
  * Replace the 'null' below with your 1000+ line JSON object.
@@ -27,7 +27,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Dehu"
           ],
           "correctAnswer": 1,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "According to the text, Sant Dnyaneshwar was born in Apegaon (near Paithan) in 1275 AD."
         },
         {
@@ -40,7 +40,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Gatha"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "He translated the Bhagavad Gita into simple Marathi, creating the book known as 'Dnyaneshwari' or 'Bhavarth Deepika'."
         },
         {
@@ -53,7 +53,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Cricket"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "The text mentions that to entertain Muktabai during the heat, he created the game 'Saapshidi' (Snakes and Ladders)."
         },
         {
@@ -66,7 +66,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Tukaram"
           ],
           "correctAnswer": 1,
-          "difficulty": "hard",
+          "difficulty": Difficulty.HARD,
           "explanation": "The text states that his older brother, Nivruttinath, became his Guru (teacher)."
         },
         {
@@ -79,7 +79,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "He talked to birds"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "When people mocked him, he prayed and made a male buffalo (Reda) recite the Vedas to show that every being has a soul."
         }
       ],
@@ -116,7 +116,7 @@ export const PRELOADED_COURSE: CourseData | null =
       "title": "संत तुकाराम (Sant Tukaram)",
       "isLoaded": true,
       "summaryEn": "Sant Tukaram was a revered saint and poet from Maharashtra, known as 'Jagadguru' and a follower of the Warkari sect who spread the Bhagwat Dharma. Born in 1608 in Dehu near Pune to Bolhoba and Kanakai Ambile, he worshipped Lord Vithoba and came from a family of landlords. He authored the 'Sant Tukaramanchi Gatha,' a collection of Marathi abhangs (verses), through which he taught virtues like truthfulness, non-violence, and helping the needy and disabled. He was highly respected by Chhatrapati Shivaji Maharaj and inspired patriotism among the people. A famous event in his life involved his literary works remaining dry and undamaged after being submerged in a river for thirteen days. He passed away in 1650, a day commemorated as 'Tukaram Beej'.",
-      "summaryMr": "संत तुकाराम हे महाराष्ट्रातील एक थोर संत कवी आणि वारकरी संप्रदायाचे पाईक होते, ज्यांनी 'जगद्गुरू' म्हणून ओळख मिळवली. त्यांचा जन्म इ.स. १६०८ मध्ये पुण्याजवळील देहू येथे वसंत पंचमीला झाला. त्यांचे वडील बोल्होबा अंबिले आणि आई कनकाई होते आणि त्यांचे कुलदैवत विठोबा होते. तुकाराम महाराजांनी 'संत तुकारामांची गाथा' या ग्रंथातून लोकांना भक्ती, सत्य आणि अहिंसेची शिकवण दिली. त्यांनी रंजल्या-गांजल्यांना आणि दिव्यांगांना मदत करणे हीच खरी ईश्वर सेवा असल्याचे सांगितले. छत्रपती शिवाजी महाराज त्यांचा खूप आदर करत. इंद्रायणी नदीत बुडवलेल्या त्यांच्या गाथेच्या वह्या कोरड्या निघाल्याचा चमत्कार प्रसिद्ध आहे. फाल्गुन वद्य द्वितीयेला, ज्याला 'तुकाराम बीज' म्हणतात, त्यांनी जगाचा निरोप घेतला.",
+      "summaryMr": "संत तुकाराम हे महाराष्ट्रातील एक थोर संत कवी आणि वारकरी संप्रदायाचे पाईक होते, ज्यांनी 'जगद्गुरू' म्हणून ओळख मिळवली. त्यांचा जन्म इ.स. १६०८ मध्ये पुण्याजवळील देहू येथे वसंत पंचमीला झाला. त्यांचे वडील बोल्होबा अंबिले आणि आई कनकाई होते आणि त्यांचे कुलदैवत विठोबा होते. तुकाराम महाराजांनी 'संत तुकारामांची गाथा' या ग्रंथातून लोकांना भक्ती, सत्य आणि अहिंसेची शिकवण दिली. त्यांनी रंजल्या-गांजल्यांना और दिव्यांगांना मदत करणे हीच खरी ईश्वर सेवा असल्याचे सांगितले. छत्रपती शिवाजी महाराज त्यांचा खूप आदर करत. इंद्रायणी नदीत बुडवलेल्या त्यांच्या गाथेच्या वह्या कोरड्या निघाल्याचा चमत्कार प्रसिद्ध आहे. फाल्गुन वद्य द्वितीयेला, ज्याला 'तुकाराम बीज' म्हणतात, त्यांनी जगाचा निरोप घेतला.",
       "practiceQuestions": [
         {
           "id": "q1",
@@ -128,7 +128,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Nashik"
           ],
           "correctAnswer": 2,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "According to the text, Sant Tukaram was born in Dehu, which is near Pune."
         },
         {
@@ -141,7 +141,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Pandit"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "The text mentions that people called him 'Jagadguru' (Great spiritual leader)."
         },
         {
@@ -154,7 +154,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Leela Charitra"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "Sant Tukaram wrote abhangs compiled in a book known as 'Sant Tukaramanchi Gatha'."
         },
         {
@@ -167,7 +167,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Berlin"
           ],
           "correctAnswer": 2,
-          "difficulty": "hard",
+          "difficulty": Difficulty.HARD,
           "explanation": "The text states that the film released in 1936 received an award at the Venice film festival."
         },
         {
@@ -180,7 +180,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Kartik Ekadashi"
           ],
           "correctAnswer": 1,
-          "difficulty": "hard",
+          "difficulty": Difficulty.HARD,
           "explanation": "Sant Tukaram left the world on Falgun Vadya Dwitiya, which is known as 'Tukaram Beej'."
         }
       ],
@@ -229,7 +229,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "27th February 1965"
           ],
           "correctAnswer": 2,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "According to the text, the state of Maharashtra was formed on 1st May 1960."
         },
         {
@@ -242,7 +242,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "1st January"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "The text states that 27th February, the memory day of poet Kusumagraj, is celebrated as 'Marathi Bhasha Gaurav Din'."
         },
         {
@@ -255,7 +255,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Ahirani"
           ],
           "correctAnswer": 3,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "The section on dialects mentions that 'Ahirani' is spoken in Khandesh (Jalgaon, Nandurbar districts)."
         },
         {
@@ -268,7 +268,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "Pomegranate (Dalimb)"
           ],
           "correctAnswer": 2,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "The text lists 'Nagpurchi Santri' (Oranges of Nagpur) under famous fruits."
         },
         {
@@ -281,7 +281,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "The Peshwas"
           ],
           "correctAnswer": 2,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "The history section states that in the 17th century, Chhatrapati Shivaji Maharaj established 'Hindavi Swarajya'."
         }
       ],
@@ -330,7 +330,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "स्वल्प विराम (,)"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "पाठातील तक्त्यानुसार, बोलणाऱ्याच्या तोंडचे शब्द दाखवण्यासाठी दुहेरी अवतरण चिन्ह (Double Inverted Commas) वापरतात."
         },
         {
@@ -343,7 +343,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "अपूर्ण विराम (:)"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "संयुक्त वाक्ये उभयान्वयी अव्ययाने जोडताना 'अर्ध विराम' (Semi colon) वापरला जातो."
         },
         {
@@ -356,7 +356,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "हे चिन्ह आनंद किंवा दुःख व्यक्त करण्यासाठी वापरले जाते."
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "संयोग चिन्ह (Hyphen) हे दोन शब्द जोडण्यासाठी वापरले जाते आणि त्याची लांबी अपसरण चिन्हापेक्षा कमी असते."
         },
         {
@@ -369,7 +369,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "दीर्घ विराम (S)"
           ],
           "correctAnswer": 0,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "तपशील किंवा क्रम द्यायचा असल्यास 'अपूर्ण विराम' (Colon) वापरतात."
         },
         {
@@ -382,7 +382,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "तो म्हणाला मी येईन"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "एकाच जातीचे शब्द (उदा. कांदा, लसूण) लागोपाठ आल्यास स्वल्प विराम वापरतात."
         }
       ],
@@ -431,7 +431,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "कौतुक करणे"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "पुस्तकानुसार, 'नाक मुरडणे' या वाक्प्रचाराचा अर्थ 'नापसंती दाखवणे' असा होतो."
         },
         {
@@ -444,7 +444,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "कामापुरता मामा"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "'पालथ्या घड्यावर पाणी' या म्हणीचा अर्थ केलेले सर्व प्रयत्न वाया जाणे किंवा निरुपयोगी ठरणे असा होतो."
         },
         {
@@ -457,7 +457,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "वेळ वाया न घालवणे"
           ],
           "correctAnswer": 0,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "पाठात दिलेल्या माहितीनुसार, 'माशा मारणे' म्हणजे 'काहीही उद्योग न करणे' किंवा रिकामे बसणे."
         },
         {
@@ -470,7 +470,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "कान फुंकणे"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "'धडा शिकवणे' या वाक्प्रचाराचा अर्थ 'शिक्षा करणे' किंवा 'अद्दल घडवणे' असा आहे."
         },
         {
@@ -483,7 +483,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "भांडणाऱ्यांचा फायदा होत नाही, पण तिसऱ्याचा फायदा होतो"
           ],
           "correctAnswer": 3,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "या म्हणीचा अर्थ असा आहे की भांडण करणाऱ्यांचा कधीही फायदा होत नाही, तर तिसऱ्याचा कोणाचा तरी फायदा होतो."
         }
       ],
@@ -532,7 +532,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "शिवाजी महाराज"
           ],
           "correctAnswer": 1,
-          "difficulty": "easy",
+          "difficulty": Difficulty.EASY,
           "explanation": "पाठात नमूद केल्याप्रमाणे, इ.स. ५०० मध्ये आर्यभट नावाच्या गणितज्ञाने शून्य आणि दशमान संख्या पद्धतीचा शोध लावला."
         },
         {
@@ -545,7 +545,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "भागाकार"
           ],
           "correctAnswer": 3,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "पाठातील माहितीनुसार Division म्हणजे भागाकार होय."
         },
         {
@@ -558,7 +558,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "x १०"
           ],
           "correctAnswer": 1,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "मराठी बोली भाषेत दुप्पट म्हणजे x २ (दोन पट) असे मानले जाते."
         },
         {
@@ -571,7 +571,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "एक हजार"
           ],
           "correctAnswer": 2,
-          "difficulty": "hard",
+          "difficulty": Difficulty.HARD,
           "explanation": "दिलेल्या तक्त्यानुसार (Table), एक कोटी म्हणजे Ten Million होय."
         },
         {
@@ -584,7 +584,7 @@ export const PRELOADED_COURSE: CourseData | null =
             "दशमान"
           ],
           "correctAnswer": 2,
-          "difficulty": "medium",
+          "difficulty": Difficulty.MEDIUM,
           "explanation": "कुठल्याही संख्येचा प्रत्येक १०० चा एक भाग म्हणजे टक्केवारी (Percentage) होय."
         }
       ],
@@ -628,7 +628,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "पुणे"
       ],
       "correctAnswer": 2,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ४१ वर स्पष्ट दिले आहे की संत ज्ञानेश्वरांचा जन्म आपेगाव (पैठण) येथे झाला."
     },
     {
@@ -641,7 +641,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "नेवासा"
       ],
       "correctAnswer": 0,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ४५ नुसार, संत तुकारामांचा जन्म देहू येथे झाला."
     },
     {
@@ -654,7 +654,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "नाशिक"
       ],
       "correctAnswer": 2,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ५१ वर नमूद केले आहे की 'मुंबई ही महाराष्ट्राची राजधानी आहे'."
     },
     {
@@ -667,7 +667,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "लाख"
       ],
       "correctAnswer": 2,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान २० वरील तक्त्यानुसार '100' ला मराठीत 'शंभर' म्हणतात."
     },
     {
@@ -680,7 +680,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "केळी"
       ],
       "correctAnswer": 1,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ५२ वर 'नागपूरची संत्री' असा उल्लेख आहे."
     },
     {
@@ -693,7 +693,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "."
       ],
       "correctAnswer": 3,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ३३ वरील तक्त्यात पूर्ण विराम (.) असा दर्शवला आहे."
     },
     {
@@ -706,7 +706,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "संत एकनाथ"
       ],
       "correctAnswer": 1,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ४१ वर दिले आहे की संत ज्ञानेश्वरांनी 'अमृतानुभव' व 'ज्ञानेश्वरी' हे ग्रंथ लिहिले."
     },
     {
@@ -719,7 +719,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "विठ्ठलपंत"
       ],
       "correctAnswer": 1,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ४२ वर स्पष्ट उल्लेख आहे की निवृत्तीनाथ हे संत ज्ञानेश्वरांचे मोठे भाऊ व गुरु होते."
     },
     {
@@ -732,7 +732,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "२६ जानेवारी"
       ],
       "correctAnswer": 1,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ५१ नुसार, कवी कुसुमाग्रजांच्या स्मृतिदिनानिमित्त २७ फेब्रुवारी हा दिवस 'मराठी भाषा गौरव दिन' म्हणून साजरा होतो."
     },
     {
@@ -745,7 +745,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "कडू"
       ],
       "correctAnswer": 1,
-      "difficulty": "EASY",
+      "difficulty": Difficulty.EASY,
       "explanation": "पान ४२ वर दिले आहे: 'मांडे हा महाराष्ट्रातील एक खाण्याचा गोड पदार्थ आहे - पुरणपोळीसारखा'."
     },
     {
@@ -758,7 +758,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "वऱ्हाडी"
       ],
       "correctAnswer": 2,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ५३ वरील यादीनुसार, खानदेशातील जळगाव, नंदुरबार जिल्ह्यांत 'अहिराणी' बोलली जाते."
     },
     {
@@ -771,7 +771,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "हुशार होणे"
       ],
       "correctAnswer": 1,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान १६ (किंवा तत्सम पानावरील तक्त्यामध्ये) 'पालथ्या घड्यावर पाणी'चा अर्थ 'सर्व प्रयत्न निरुपयोगी ठरणे' असा दिला आहे."
     },
     {
@@ -784,7 +784,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "-"
       ],
       "correctAnswer": 1,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ३३ वरील तक्त्यात अर्धविराम (;) असा दाखवला आहे."
     },
     {
@@ -797,7 +797,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "साहू महाराज"
       ],
       "correctAnswer": 2,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ४५ वर उल्लेख आहे की 'त्यावेळी शिवाजी महाराज पण लढत होते', म्हणजेच ते समकालीन होते."
     },
     {
@@ -810,7 +810,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "पैठण"
       ],
       "correctAnswer": 2,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ४३ वर दिले आहे: 'महाराष्ट्रात आळंदी येथे त्यांचे मंदिर आहे' व त्यांनी वयाच्या २१ व्या वर्षी समाधी घेतली."
     },
     {
@@ -823,7 +823,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "एक कोटी"
       ],
       "correctAnswer": 1,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान २० वरील तक्त्याप्रमाणे १,००,००० ला 'एक लाख' (One Hundred Thousand) म्हणतात."
     },
     {
@@ -836,7 +836,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "संत तुकाराम"
       ],
       "correctAnswer": 3,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ४५ वर दिले आहे: 'लोक त्यांना जगद्गुरू असे म्हणत'."
     },
     {
@@ -849,7 +849,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "बोरं"
       ],
       "correctAnswer": 2,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ५२ वर दिले आहे: 'सांगलीची व नाशिकची द्राक्षे'."
     },
     {
@@ -862,7 +862,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "गप्प बसणे"
       ],
       "correctAnswer": 1,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान १४ वरील जोड्या लावा भागात 'डोके खाणे' म्हणजे 'त्रास देणे' अशी जोडी आहे."
     },
     {
@@ -875,7 +875,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "बहिणाबाई"
       ],
       "correctAnswer": 2,
-      "difficulty": "MEDIUM",
+      "difficulty": Difficulty.MEDIUM,
       "explanation": "पान ४१ वर दिले आहे: 'त्यांना एक बहीण पण होती. तिचे नाव मुक्ताबाई'."
     },
     {
@@ -888,7 +888,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "शिवाची भक्ती करणारे"
       ],
       "correctAnswer": 1,
-      "difficulty": "HARD",
+      "difficulty": Difficulty.HARD,
       "explanation": "पान ४१ आणि Glossary (पान ४३) मध्ये दिले आहे की जे लोक विठ्ठल भक्ती करतात त्यांना वारकरी पंथातील लोक म्हणतात."
     },
     {
@@ -901,7 +901,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "उद्गार चिन्ह"
       ],
       "correctAnswer": 1,
-      "difficulty": "HARD",
+      "difficulty": Difficulty.HARD,
       "explanation": "पान ३४ वरील तक्त्यात 'संयोग चिन्ह' (Hyphen) चा उपयोग 'ओळीच्या शेवटी शब्द अपूर्ण राहिल्यास' असा दिला आहे."
     },
     {
@@ -914,7 +914,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "तत्वज्ञ"
       ],
       "correctAnswer": 1,
-      "difficulty": "HARD",
+      "difficulty": Difficulty.HARD,
       "explanation": "पान २० वर आर्यभट्ट नावाचा एक 'गणितज्ञ' (Mathematician) होता असा उल्लेख आहे."
     },
     {
@@ -927,7 +927,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "सिंधुदुर्ग आणि रत्नागिरी"
       ],
       "correctAnswer": 2,
-      "difficulty": "HARD",
+      "difficulty": Difficulty.HARD,
       "explanation": "पान ५३ वरील तक्त्यानुसार 'झाडीबोली' ही गडचिरोली, चंद्रपूर आणि भंडारा जिल्ह्यांत बोलली जाते."
     },
     {
@@ -940,7 +940,7 @@ export const PRELOADED_COURSE: CourseData | null =
         "९० डॉलर्स"
       ],
       "correctAnswer": 2,
-      "difficulty": "HARD",
+      "difficulty": Difficulty.HARD,
       "explanation": "पान २२ वर हे उदाहरण दिले आहे. १७ x ५ = ८५."
     }
   ],
@@ -1017,13 +1017,13 @@ export const PRELOADED_COURSE: CourseData | null =
     },
     {
       "id": "15",
-      "front": "महाराष्ट्रातील आदिवासींची प्रसिद्ध चित्रकला कोणती?",
+      "front": "महाराष्ट्रातील आदिवासींची प्रसिद्ध चित्रकला कौनती?",
       "back": "वारली चित्रकला."
     },
     {
       "id": "16",
       "front": "महाराष्ट्रातील प्रमुख बोलीभाषा कोणत्या?",
-      "back": "कोकणी, मालवणी, अहिराणी, वऱ्हाडी, मराठवाडी आणि कोल्हापुरी."
+      "back": "कोकणी, मालवणी, अहिराणी, वऱ्हाडी, मराठवाडी और कोल्हापुरी."
     },
     {
       "id": "17",
@@ -1071,4 +1071,4 @@ export const PRELOADED_COURSE: CourseData | null =
       "back": "1. बेरीज \n2. वजाबाकी \n3. गुणाकार"
     }
   ]
-}; 
+};

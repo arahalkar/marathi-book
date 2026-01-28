@@ -2,8 +2,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { CourseData, Topic, Question, Flashcard } from "../types";
 
+// Always initialize GoogleGenAI using the prescribed pattern and API_KEY environment variable.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-// Use gemini-3-pro-preview for more robust curriculum analysis and pedagogical content generation
 const PRO_MODEL = 'gemini-3-pro-preview';
 
 /**
@@ -63,6 +63,7 @@ export const processTopicDetail = async (base64Data: string, mimeType: string, t
     4. Create 5 flashcards for vocabulary or key concepts from this chapter.
     
     STRICT RULE: Use ONLY information from the book relevant to this specific topic.
+    STRICT RULE: For the "difficulty" field in questions, use only the lowercase strings "easy", "medium", or "hard".
   `;
 
   const response = await ai.models.generateContent({
@@ -127,6 +128,7 @@ export const generateGrandQuiz = async (base64Data: string, mimeType: string): P
     - MEDIUM: 10 questions
     - HARD: 5 questions
     The questions should span the entire course material.
+    STRICT RULE: For the "difficulty" field, use only the lowercase strings "easy", "medium", or "hard".
   `;
 
   const response = await ai.models.generateContent({
