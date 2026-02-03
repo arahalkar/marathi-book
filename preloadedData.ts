@@ -1,1074 +1,838 @@
 
 import { CourseData, Difficulty } from './types';
 
-/**
- * Replace the 'null' below with your 1000+ line JSON object.
- * It should look like: export const PRELOADED_COURSE: CourseData | null = { ... };
- */
-export const PRELOADED_COURSE: CourseData | null = 
-/* PASTE YOUR 1000+ LINES OF JSON STARTING FROM THE CURLY BRACE { BELOW */
-{
-  "title": "मराठी भाषा कार्यपुस्तिका Level 5 - पाचवी",
+export const PRELOADED_COURSE: CourseData | null = {
+  "title": "मराठी मित्र - इयत्ता पाचवी (Level 5)",
   "topics": [
     {
       "id": "1",
       "title": "संत ज्ञानेश्वर (Sant Dnyaneshwar)",
       "isLoaded": true,
-      "summaryEn": "Sant Dnyaneshwar was a prominent 13th-century Marathi saint and poet born in Apegaon in 1275 AD to parents Vitthalpant and Rukmini. Along with his siblings Nivruttinath, Sopan, and Muktabai, he faced social difficulties but was highly learned in the Vedas and Yoga. He is best known for translating the Sanskrit Bhagavad Gita into simple Marathi as the 'Dnyaneshwari' (Bhavarth Deepika) at the age of 16 and for establishing the Varkari sect. The text describes miracles such as making a buffalo recite the Vedas and baking 'Mande' (sweet flatbread) on his heated back for his sister using yogic powers. He also invented the game 'Snakes and Ladders' for his sister before taking Sanjeevan Samadhi at Alandi at the age of 22 in 1296 AD.",
-      "summaryMr": "संत ज्ञानेश्वर हे तेराव्या शतकातील महान मराठी संत आणि कवी होते, ज्यांचा जन्म १२७५ मध्ये आपेगाव येथे झाला. विठ्ठलपंत आणि रुक्मिणी यांची ही मुले असून, त्यांचे थोरले भाऊ निवृत्तीनाथ हे त्यांचे गुरु होते. सामान्य लोकांना संस्कृत समजत नसल्यामुळे त्यांनी भगवद्गीता मराठीत अनुवादित करून 'ज्ञानेश्वरी' (भावार्थ दीपिका) हा ग्रंथ लिहिला आणि वारकरी संप्रदायाचा पाया रचला. त्यांनी आपल्या योगशक्तीचा वापर करून मुक्ताबाईसाठी स्वतःच्या पाठीवर मांडे भाजणे आणि रेड्याच्या मुखातून वेद वदवणे असे चमत्कार केले. त्यांनी मुक्ताबाईसाठी 'सापशिडी' हा खेळ तयार केला होता. वयाच्या २२ व्या वर्षी, १२९६ मध्ये त्यांनी आळंदी येथे संजीवन समाधी घेतली.",
+      "summaryEn": "Sant Dnyaneshwar was a prominent 13th-century Marathi saint and poet who translated the Bhagavad Gita into simple Marathi as the 'Dnyaneshwari'.",
+      "summaryMr": "संत ज्ञानेश्वर हे १३ व्या शतकातील महान मराठी संत आणि कवी होते. त्यांनी सामान्य लोकांसाठी 'ज्ञानेश्वरी' हा ग्रंथ लिहिला आणि वारकरी संप्रदायाचा पाया रचला.",
       "practiceQuestions": [
         {
-          "id": "q1",
-          "text": "Where was Sant Dnyaneshwar born?",
-          "options": [
-            "Alandi",
-            "Apegaon",
-            "Nevasa",
-            "Dehu"
-          ],
+          "id": "1-1",
+          "text": "संत ज्ञानेश्वरांचा जन्म कोठे झाला?",
+          "options": ["आळंदी", "आपेगाव", "देहू", "पैठण"],
           "correctAnswer": 1,
           "difficulty": Difficulty.EASY,
-          "explanation": "According to the text, Sant Dnyaneshwar was born in Apegaon (near Paithan) in 1275 AD."
+          "explanation": "संत ज्ञानेश्वरांचा जन्म आपेगाव येथे झाला."
         },
         {
-          "id": "q2",
-          "text": "Which holy book did Sant Dnyaneshwar write in Marathi?",
-          "options": [
-            "Dasbodh",
-            "Bhagavad Gita (Sanskrit)",
-            "Dnyaneshwari",
-            "Gatha"
-          ],
+          "id": "1-2",
+          "text": "ज्ञानेश्वरी या ग्रंथाची रचना कोणी केली?",
+          "options": ["संत तुकाराम", "संत नामदेव", "संत ज्ञानेश्वर", "संत एकनाथ"],
           "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "He translated the Bhagavad Gita into simple Marathi, creating the book known as 'Dnyaneshwari' or 'Bhavarth Deepika'."
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q3",
-          "text": "Which game did Sant Dnyaneshwar create for his sister Muktabai?",
-          "options": [
-            "Chess",
-            "Hide and Seek",
-            "Snakes and Ladders",
-            "Cricket"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "The text mentions that to entertain Muktabai during the heat, he created the game 'Saapshidi' (Snakes and Ladders)."
-        },
-        {
-          "id": "q4",
-          "text": "Who was Sant Dnyaneshwar's Guru?",
-          "options": [
-            "Vitthalpant",
-            "Nivruttinath",
-            "Sopan",
-            "Tukaram"
-          ],
+          "id": "1-3",
+          "text": "ज्ञानेश्वरांच्या मोठ्या भावाचे नाव काय होते?",
+          "options": ["सोपान", "निवृत्तीनाथ", "विठ्ठल", "नामदेव"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.HARD,
-          "explanation": "The text states that his older brother, Nivruttinath, became his Guru (teacher)."
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q5",
-          "text": "What miracle is associated with Sant Dnyaneshwar regarding an animal?",
-          "options": [
-            "He made a tiger vegetarian",
-            "He made a buffalo recite the Vedas",
-            "He healed a sick elephant",
-            "He talked to birds"
-          ],
+          "id": "1-4",
+          "text": "मुक्ताबाईसाठी ज्ञानेश्वरांनी काय चमत्कार केला होता?",
+          "options": ["पाऊस पाडला", "पाठीवर मांडे भाजले", "झाड लावले", "मदत केली"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "When people mocked him, he prayed and made a male buffalo (Reda) recite the Vedas to show that every being has a soul."
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "1-5",
+          "text": "ज्ञानेश्वरांनी कोठे संजीवन समाधी घेतली?",
+          "options": ["आळंदी", "पुणे", "मुंबई", "नाशिक"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.EASY
         }
       ],
       "flashcards": [
-        {
-          "id": "fc1",
-          "front": "Dnyaneshwari",
-          "back": "The important book written by Sant Dnyaneshwar in Marathi at age 16, also known as Bhavarth Deepika."
-        },
-        {
-          "id": "fc2",
-          "front": "Varkari",
-          "back": "People who worship Lord Vitthal; a sect started by Sant Dnyaneshwar."
-        },
-        {
-          "id": "fc3",
-          "front": "Mande (मांडे)",
-          "back": "A sweet dish (like Puran poli) that Muktabai baked on Sant Dnyaneshwar's back using his yogic heat."
-        },
-        {
-          "id": "fc4",
-          "front": "Alandi",
-          "back": "The place in Maharashtra where Sant Dnyaneshwar took Sanjeevan Samadhi at the age of 22."
-        },
-        {
-          "id": "fc5",
-          "front": "Amrutanubhav",
-          "back": "Another significant book written by Sant Dnyaneshwar, mentioned alongside Dnyaneshwari."
-        }
+        { "id": "1-f1", "front": "ज्ञानेश्वरी", "back": "भगवद्गीतेचा मराठी अनुवाद." },
+        { "id": "1-f2", "front": "आपेगाव", "back": "ज्ञानेश्वरांचे जन्मस्थान." },
+        { "id": "1-f3", "front": "वारकरी", "back": "विठ्ठलाचे भक्त." },
+        { "id": "1-f4", "front": "निवृत्तीनाथ", "back": "ज्ञानेश्वरांचे थोरले बंधू आणि गुरु." },
+        { "id": "1-f5", "front": "आळंदी", "back": "ज्ञानेश्वरांचे समाधी स्थळ." }
       ]
     },
     {
       "id": "2",
       "title": "संत तुकाराम (Sant Tukaram)",
       "isLoaded": true,
-      "summaryEn": "Sant Tukaram was a revered saint and poet from Maharashtra, known as 'Jagadguru' and a follower of the Warkari sect who spread the Bhagwat Dharma. Born in 1608 in Dehu near Pune to Bolhoba and Kanakai Ambile, he worshipped Lord Vithoba and came from a family of landlords. He authored the 'Sant Tukaramanchi Gatha,' a collection of Marathi abhangs (verses), through which he taught virtues like truthfulness, non-violence, and helping the needy and disabled. He was highly respected by Chhatrapati Shivaji Maharaj and inspired patriotism among the people. A famous event in his life involved his literary works remaining dry and undamaged after being submerged in a river for thirteen days. He passed away in 1650, a day commemorated as 'Tukaram Beej'.",
-      "summaryMr": "संत तुकाराम हे महाराष्ट्रातील एक थोर संत कवी आणि वारकरी संप्रदायाचे पाईक होते, ज्यांनी 'जगद्गुरू' म्हणून ओळख मिळवली. त्यांचा जन्म इ.स. १६०८ मध्ये पुण्याजवळील देहू येथे वसंत पंचमीला झाला. त्यांचे वडील बोल्होबा अंबिले आणि आई कनकाई होते आणि त्यांचे कुलदैवत विठोबा होते. तुकाराम महाराजांनी 'संत तुकारामांची गाथा' या ग्रंथातून लोकांना भक्ती, सत्य आणि अहिंसेची शिकवण दिली. त्यांनी रंजल्या-गांजल्यांना और दिव्यांगांना मदत करणे हीच खरी ईश्वर सेवा असल्याचे सांगितले. छत्रपती शिवाजी महाराज त्यांचा खूप आदर करत. इंद्रायणी नदीत बुडवलेल्या त्यांच्या गाथेच्या वह्या कोरड्या निघाल्याचा चमत्कार प्रसिद्ध आहे. फाल्गुन वद्य द्वितीयेला, ज्याला 'तुकाराम बीज' म्हणतात, त्यांनी जगाचा निरोप घेतला.",
+      "summaryEn": "Sant Tukaram was a 17th-century saint-poet whose abhangas are widely read in Maharashtra. He lived in Dehu.",
+      "summaryMr": "संत तुकाराम हे १७ व्या शतकातील थोर संत कवी होते. त्यांनी देहू येथे राहून 'गाथा' लिहिली आणि विठ्ठलाची भक्ती केली.",
       "practiceQuestions": [
         {
-          "id": "q1",
-          "text": "Where was Sant Tukaram born?",
-          "options": [
-            "Alandi",
-            "Paithan",
-            "Dehu",
-            "Nashik"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.EASY,
-          "explanation": "According to the text, Sant Tukaram was born in Dehu, which is near Pune."
-        },
-        {
-          "id": "q2",
-          "text": "What title did people use to address Sant Tukaram?",
-          "options": [
-            "Samarth",
-            "Jagadguru",
-            "Maharaj",
-            "Pandit"
-          ],
+          "id": "2-1",
+          "text": "संत तुकाराम महाराजांचे गाव कोणते?",
+          "options": ["आळंदी", "देहू", "पुणे", "पैठण"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "The text mentions that people called him 'Jagadguru' (Great spiritual leader)."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q3",
-          "text": "Which book is the collection of Sant Tukaram's literary works?",
-          "options": [
-            "Dnyaneshwari",
-            "Dasbodh",
-            "Sant Tukaramanchi Gatha",
-            "Leela Charitra"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "Sant Tukaram wrote abhangs compiled in a book known as 'Sant Tukaramanchi Gatha'."
-        },
-        {
-          "id": "q4",
-          "text": "At which film festival did the 1936 movie about Sant Tukaram receive an award?",
-          "options": [
-            "Cannes",
-            "Oscar",
-            "Venice",
-            "Berlin"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.HARD,
-          "explanation": "The text states that the film released in 1936 received an award at the Venice film festival."
-        },
-        {
-          "id": "q5",
-          "text": "Which day is observed as 'Tukaram Beej'?",
-          "options": [
-            "Vasant Panchami",
-            "Falgun Vadya Dwitiya",
-            "Magh Shuddha Panchami",
-            "Kartik Ekadashi"
-          ],
+          "id": "2-2",
+          "text": "तुकारामांच्या काव्यरचनांना काय म्हणतात?",
+          "options": ["ओवी", "अभंग", "श्लोक", "दोहे"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.HARD,
-          "explanation": "Sant Tukaram left the world on Falgun Vadya Dwitiya, which is known as 'Tukaram Beej'."
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "2-3",
+          "text": "तुकाराम महाराजांच्या वडिलांचे नाव काय होते?",
+          "options": ["विठ्ठल", "बोल्होबा", "नामदेव", "राम"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "2-4",
+          "text": "'तुकाराम बीज' हा दिवस कोणत्या महिन्यात येतो?",
+          "options": ["चैत्र", "फाल्गुन", "आषाढ", "कार्तिक"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "2-5",
+          "text": "कोणत्या महान राजाने तुकारामांचा आदर केला होता?",
+          "options": ["अकबर", "शिवाजी महाराज", "संभाजी महाराज", "शाहू महाराज"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
         }
       ],
       "flashcards": [
-        {
-          "id": "fc1",
-          "front": "जगद्गुरू (Jagadguru)",
-          "back": "A title given to Sant Tukaram meaning 'Great spiritual leader'."
-        },
-        {
-          "id": "fc2",
-          "front": "संत तुकारामांची गाथा (Sant Tukaramanchi Gatha)",
-          "back": "The collection of abhangs (verses) written by Sant Tukaram."
-        },
-        {
-          "id": "fc3",
-          "front": "देहू (Dehu)",
-          "back": "The birthplace of Sant Tukaram located near Pune."
-        },
-        {
-          "id": "fc4",
-          "front": "कुलदैवत (Kuldaivat)",
-          "back": "Family Deity or Family God; for Tukaram's family, it was Vithoba."
-        },
-        {
-          "id": "fc5",
-          "front": "तुकाराम बीज (Tukaram Beej)",
-          "back": "The day Sant Tukaram left the world (Falgun Vadya Dwitiya)."
-        }
+        { "id": "2-f1", "front": "गाथा", "back": "तुकारामांच्या अभंगांचा संग्रह." },
+        { "id": "2-f2", "front": "विठ्ठल", "back": "तुकारामांचे कुलदैवत." },
+        { "id": "2-f3", "front": "देहू", "back": "तुकारामांचे जन्मस्थान." },
+        { "id": "2-f4", "front": "जगद्गुरू", "back": "तुकारामांना दिलेली उपाधी." },
+        { "id": "2-f5", "front": "अभंग", "back": "एक मराठी काव्यप्रकार." }
       ]
     },
     {
       "id": "3",
-      "title": "माझा महाराष्ट्र – एक सर्वांगसुंदर राज्य",
+      "title": "माझा महाराष्ट्र (My Maharashtra)",
       "isLoaded": true,
-      "summaryEn": "The chapter 'My Maharashtra – A beautiful state in all aspects' provides a comprehensive overview of the state of Maharashtra, which was formed on May 1, 1960, with Mumbai as its capital. It details the state's glorious history featuring rulers like the Satavahanas and Chhatrapati Shivaji Maharaj, and its geography, bordered by the Arabian Sea and ranges like Sahyadri. The text highlights Maharashtra's vibrant culture, including the saint tradition, festivals like Ganeshotsav, and art forms like Warli painting and Lavani. It also describes the diverse food culture (e.g., Puran Poli, Misal Pav), famous fruits like Alphonso mangoes and Nagpur oranges, various regional dialects such as Ahirani and Malvani, and notable contributions to music, literature, and sports.",
-      "summaryMr": "'माझा महाराष्ट्र – एक सर्वांगसुंदर राज्य' या पाठात महाराष्ट्राचा इतिहास, भूगोल, आणि संस्कृतीची माहिती दिली आहे. १ मे १९६० रोजी महाराष्ट्राची स्थापना झाली आणि मुंबई ही राज्याची राजधानी आहे. पाठात छत्रपती शिवाजी महाराजांनी स्थापन केलेले स्वराज्य, सह्याद्री व सातपुडा पर्वतरांगा, आणि गोदावरी-कृष्णा यांसारख्या नद्यांचा उल्लेख आहे. महाराष्ट्राची खाद्यसंस्कृती, वारली चित्रकला, लावणी नृत्य आणि गणेशोत्सवासारखे सण यांचा परिचय करून दिला आहे. तसेच कोकणातील हापूस आंबा, नागपूरची संत्री, आणि राज्याच्या विविध भागांत बोलल्या जाणाऱ्या अहिराणी, मालवणी, वऱ्हाडी यांसारख्या बोलीभाषांची माहिती यात समाविष्ट आहे.",
+      "summaryEn": "A comprehensive look at the state of Maharashtra, its geography, culture, and capital Mumbai.",
+      "summaryMr": "महाराष्ट्र राज्याची स्थापना १ मे १९६० रोजी झाली. मुंबई ही राज्याची राजधानी असून सह्याद्री आणि गोदावरी हे राज्याचे वैभव आहेत.",
       "practiceQuestions": [
         {
-          "id": "q1",
-          "text": "When was the state of Maharashtra formed?",
-          "options": [
-            "15th August 1947",
-            "26th January 1950",
-            "1st May 1960",
-            "27th February 1965"
-          ],
+          "id": "3-1",
+          "text": "महाराष्ट्र राज्याची स्थापना कधी झाली?",
+          "options": ["१५ ऑगस्ट १९४७", "२६ जानेवारी १९५०", "१ मे १९६०", "१ मे १९५०"],
           "correctAnswer": 2,
-          "difficulty": Difficulty.EASY,
-          "explanation": "According to the text, the state of Maharashtra was formed on 1st May 1960."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q2",
-          "text": "Which day is celebrated as 'Marathi Bhasha Gaurav Din'?",
-          "options": [
-            "1st May",
-            "27th February",
-            "15th August",
-            "1st January"
-          ],
+          "id": "3-2",
+          "text": "महाराष्ट्राची राजधानी कोणती आहे?",
+          "options": ["पुणे", "मुंबई", "नागपूर", "नाशिक"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "The text states that 27th February, the memory day of poet Kusumagraj, is celebrated as 'Marathi Bhasha Gaurav Din'."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q3",
-          "text": "Which dialect is primarily spoken in the Khandesh region (Jalgaon, Nandurbar)?",
-          "options": [
-            "Malvani",
-            "Konkani",
-            "Varhadi",
-            "Ahirani"
-          ],
-          "correctAnswer": 3,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "The section on dialects mentions that 'Ahirani' is spoken in Khandesh (Jalgaon, Nandurbar districts)."
-        },
-        {
-          "id": "q4",
-          "text": "Which fruit from Nagpur is famous?",
-          "options": [
-            "Mango (Hapus)",
-            "Grapes (Drakshe)",
-            "Orange (Santri)",
-            "Pomegranate (Dalimb)"
-          ],
+          "id": "3-3",
+          "text": "नागपूर शहर कोणत्या फळासाठी प्रसिद्ध आहे?",
+          "options": ["आंबा", "द्राक्षे", "संत्री", "केळी"],
           "correctAnswer": 2,
-          "difficulty": Difficulty.EASY,
-          "explanation": "The text lists 'Nagpurchi Santri' (Oranges of Nagpur) under famous fruits."
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q5",
-          "text": "Who established Swarajya in the 17th century in Maharashtra?",
-          "options": [
-            "Satavahana Rulers",
-            "Yadav Rulers",
-            "Chhatrapati Shivaji Maharaj",
-            "The Peshwas"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.EASY,
-          "explanation": "The history section states that in the 17th century, Chhatrapati Shivaji Maharaj established 'Hindavi Swarajya'."
+          "id": "3-4",
+          "text": "महाराष्ट्रातील सर्वात मोठी नदी कोणती?",
+          "options": ["गोदावरी", "कृष्णा", "तापी", "भीमा"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "3-5",
+          "text": "खानदेशात कोणती बोलीभाषा बोलली जाते?",
+          "options": ["मालवणी", "अहिराणी", "वऱ्हाडी", "कोकणी"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
         }
       ],
       "flashcards": [
-        {
-          "id": "fc1",
-          "front": "Rajdhani (Capital) of Maharashtra",
-          "back": "Mumbai"
-        },
-        {
-          "id": "fc2",
-          "front": "Sahyadri",
-          "back": "A major mountain range located in Maharashtra."
-        },
-        {
-          "id": "fc3",
-          "front": "Puran Poli",
-          "back": "A famous sweet dish from Maharashtra's food culture."
-        },
-        {
-          "id": "fc4",
-          "front": "Warli",
-          "back": "A traditional tribal painting style and community in Maharashtra."
-        },
-        {
-          "id": "fc5",
-          "front": "Lavani",
-          "back": "A traditional folk dance and music form of Maharashtra."
-        }
+        { "id": "3-f1", "front": "सह्याद्री", "back": "महाराष्ट्रातील मुख्य पर्वतरांग." },
+        { "id": "3-f2", "front": "मुंबई", "back": "महाराष्ट्राची राजधानी." },
+        { "id": "3-f3", "front": "१ मे", "back": "महाराष्ट्र दिन." },
+        { "id": "3-f4", "front": "लाडू-पोळी", "back": "मराठी सणांचा गोड पदार्थ." },
+        { "id": "3-f5", "front": "वारली", "back": "महाराष्ट्राची प्रसिद्ध आदिवासी चित्रकला." }
       ]
     },
     {
       "id": "4",
-      "title": "विरामचिन्हे",
+      "title": "विरामचिन्हे (Punctuation)",
       "isLoaded": true,
-      "summaryEn": "The chapter 'Viramchinhe' (Punctuation Marks) explains that punctuation is used in writing to represent the natural pauses and intonation used while speaking. It provides a comprehensive guide to various marks, including the full stop for ending sentences, the semi-colon for joining clauses, and the comma for lists or addressing someone. It also details the colon for details, the question mark for inquiries, and the exclamation mark for strong emotions. Additionally, the chapter distinguishes between single and double inverted commas for emphasis versus direct speech, and clarifies the difference between the hyphen (used to join words) and the long hyphen (used for explanations), noting that the latter is physically longer.",
-      "summaryMr": "'विरामचिन्हे' या पाठात लेखनामध्ये वापरल्या जाणाऱ्या विविध चिन्हांची ओळख आणि महत्त्व समजावून सांगितले आहे. आपण बोलताना जसे मध्ये थांबतो, त्याला 'विराम' म्हणतात आणि लेखनात तो दर्शवण्यासाठी जी चिन्हे वापरली जातात, त्यांना 'विरामचिन्हे' म्हणतात. या पाठात पूर्ण विराम, अर्ध विराम, स्वल्प विराम, अपूर्ण विराम, प्रश्नचिन्ह आणि उद्गारचिन्ह यांचा वापर केव्हा करायचा हे उदाहरणांसह स्पष्ट केले आहे. तसेच, दुहेरी व एकेरी अवतरण चिन्हांचा फरक, दोन शब्द जोडणारे संयोग चिन्ह आणि स्पष्टीकरणासाठी वापरले जाणारे अपसरण चिन्ह यांतील लांबीचा व उपयोगाचा फरक यांबद्दल माहिती दिली आहे.",
+      "summaryEn": "Learn the correct usage of full stops, commas, and question marks in Marathi grammar.",
+      "summaryMr": "लेखन करताना अर्थ स्पष्ट होण्यासाठी विरामचिन्हांचा वापर करणे आवश्यक असते. पूर्णविराम, स्वल्पविराम आणि प्रश्नचिन्ह ही महत्त्वाची चिन्हे आहेत.",
       "practiceQuestions": [
         {
-          "id": "q1",
-          "text": "एखाद्या व्यक्तीच्या तोंडचे शब्द जसेच्या तसे दाखवण्यासाठी कोणते विरामचिन्ह वापरतात?",
-          "options": [
-            "एकेरी अवतरण चिन्ह (' ')",
-            "दुहेरी अवतरण चिन्ह (\" \")",
-            "संयोग चिन्ह (-)",
-            "स्वल्प विराम (,)"
-          ],
+          "id": "4-1",
+          "text": "वाक्य पूर्ण झाल्यावर कोणते चिन्ह वापरतात?",
+          "options": ["स्वल्पविराम", "प्रश्नचिन्ह", "पूर्णविराम", "उद्गारचिन्ह"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "4-2",
+          "text": "प्रश्न विचारण्यासाठी कोणते चिन्ह वापरतात?",
+          "options": ["!", "?", ".", ","],
           "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "पाठातील तक्त्यानुसार, बोलणाऱ्याच्या तोंडचे शब्द दाखवण्यासाठी दुहेरी अवतरण चिन्ह (Double Inverted Commas) वापरतात."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q2",
-          "text": "दोन छोटे वाक्ये उभयान्वयी अव्ययाने जोडताना कोणते चिन्ह वापरतात?",
-          "options": [
-            "पूर्ण विराम (.)",
-            "स्वल्प विराम (,)",
-            "अर्ध विराम (;)",
-            "अपूर्ण विराम (:)"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "संयुक्त वाक्ये उभयान्वयी अव्ययाने जोडताना 'अर्ध विराम' (Semi colon) वापरला जातो."
+          "id": "4-3",
+          "text": "एकाच जातीचे अनेक शब्द लागोपाठ आल्यास काय वापरतात?",
+          "options": ["पूर्णविराम", "स्वल्पविराम", "अर्धविराम", "संयोगचिन्ह"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q3",
-          "text": "खालीलपैकी कोणते विधान 'संयोग चिन्हा' बाबत खरे आहे?",
-          "options": [
-            "हे चिन्ह अपसरण चिन्हापेक्षा लांबीने जास्त असते.",
-            "हे चिन्ह वाक्याच्या शेवटी वापरले जाते.",
-            "हे चिन्ह दोन शब्द जोडण्यासाठी वापरले जाते.",
-            "हे चिन्ह आनंद किंवा दुःख व्यक्त करण्यासाठी वापरले जाते."
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "संयोग चिन्ह (Hyphen) हे दोन शब्द जोडण्यासाठी वापरले जाते आणि त्याची लांबी अपसरण चिन्हापेक्षा कमी असते."
+          "id": "4-4",
+          "text": "दुहेरी अवतरण चिन्ह ( \" \" ) केव्हा वापरतात?",
+          "options": ["वाक्य पूर्ण झाल्यावर", "बोलणाऱ्याच्या तोंडचे शब्द दाखवण्यासाठी", "प्रश्न विचारण्यासाठी", "भीती वाटल्यावर"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
         },
         {
-          "id": "q4",
-          "text": "वाक्याच्या शेवटी तपशील किंवा क्रम द्यायचा असल्यास कोणते चिन्ह वापरतात?",
-          "options": [
-            "अपूर्ण विराम (:)",
-            "अर्ध विराम (;)",
-            "प्रश्नचिन्ह (?)",
-            "दीर्घ विराम (S)"
-          ],
-          "correctAnswer": 0,
-          "difficulty": Difficulty.EASY,
-          "explanation": "तपशील किंवा क्रम द्यायचा असल्यास 'अपूर्ण विराम' (Colon) वापरतात."
-        },
-        {
-          "id": "q5",
-          "text": "खालीलपैकी कोणत्या उदाहरणात 'स्वल्प विराम' (Comma) योग्य प्रकारे वापरला जाईल?",
-          "options": [
-            "मी शाळेत जातो",
-            "अरेरे त्याला कावीळ झाली",
-            "आईने बाजारातून कांदा लसूण व साखर आणली",
-            "तो म्हणाला मी येईन"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "एकाच जातीचे शब्द (उदा. कांदा, लसूण) लागोपाठ आल्यास स्वल्प विराम वापरतात."
+          "id": "4-5",
+          "text": "उद्गारचिन्ह केव्हा वापरले जाते?",
+          "options": ["प्रश्न विचारताना", "आनंद किंवा भीती व्यक्त करताना", "नाव सांगताना", "स्वल्पविराम देताना"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
         }
       ],
       "flashcards": [
-        {
-          "id": "fc1",
-          "front": "पूर्ण विराम (.)",
-          "back": "वाक्य पूर्ण झाले हे दर्शवण्यासाठी किंवा शब्दांचा संक्षेप दाखवण्यासाठी वापरले जाणारे चिन्ह."
-        },
-        {
-          "id": "fc2",
-          "front": "उद्गारचिन्ह (!)",
-          "back": "आनंद, दुःख, भीती इत्यादी भावना व्यक्त करणाऱ्या शब्दाच्या किंवा वाक्याच्या शेवटी वापरले जाणारे चिन्ह."
-        },
-        {
-          "id": "fc3",
-          "front": "संयोग चिन्ह (-)",
-          "back": "दोन शब्द जोडण्यासाठी किंवा ओळीच्या शेवटी शब्द अपूर्ण राहिल्यास वापरले जाणारे चिन्ह (हे लांबीने कमी असते)."
-        },
-        {
-          "id": "fc4",
-          "front": "अपसरण चिन्ह (_)",
-          "back": "वाक्यातील विचारांबद्दल स्पष्टीकरण देण्यासाठी किंवा विचार मालिका तुटल्यास वापरले जाणारे चिन्ह (हे लांबीने संयोग चिन्हापेक्षा जास्त असते)."
-        },
-        {
-          "id": "fc5",
-          "front": "एकेरी अवतरण चिन्ह (' ')",
-          "back": "एखाद्या शब्दावर जोर देण्यासाठी किंवा वाक्यावर अथवा विशिष्ट शब्दाकडे लक्ष वेधण्यासाठी वापरले जाणारे चिन्ह."
-        }
+        { "id": "4-f1", "front": "पूर्णविराम (.)", "back": "वाक्य पूर्ण झाले की वापरतात." },
+        { "id": "4-f2", "front": "स्वल्पविराम (,)", "back": "थोड्या विश्रांतीसाठी वापरतात." },
+        { "id": "4-f3", "front": "प्रश्नचिन्ह (?)", "back": "प्रश्न विचारताना वापरतात." },
+        { "id": "4-f4", "front": "उद्गारचिन्ह (!)", "back": "भावना व्यक्त करताना वापरतात." },
+        { "id": "4-f5", "front": "अवतरण चिन्ह", "back": "महत्त्वाचा शब्द किंवा संवाद दर्शवण्यासाठी." }
       ]
     },
     {
       "id": "5",
-      "title": "वाक्प्रचार आणि म्हणी",
+      "title": "वाक्प्रचार (Idioms)",
       "isLoaded": true,
-      "summaryEn": "This chapter introduces the concepts of 'Wakprachar' (Idioms) and 'Mhani' (Proverbs) in the Marathi language. It explains that an idiom is a group of words with a figurative meaning distinct from its literal interpretation, serving as a part of a sentence rather than a standalone statement. In contrast, a proverb is a complete sentence derived from experience that conveys a moral lesson or wisdom. The text highlights that both idioms and proverbs add beauty and effectiveness to the language. It provides a list of common idioms like 'Naak muradane' (to show dislike) and 'Dhada shikavane' (to teach a lesson), as well as proverbs such as 'Palthya ghadyavar pani' (futile effort) and 'Perave tase ugavate' (as you sow, so shall you reap), accompanied by their meanings and examples of usage.",
-      "summaryMr": "या पाठात 'वाक्प्रचार' आणि 'म्हणी' यांतील फरक आणि त्यांचे महत्त्व स्पष्ट केले आहे. वाक्प्रचार हा शब्दांचा असा समूह असतो ज्याचा शब्दशः अर्थ न घेता रूढ अर्थ घ्यावा लागतो आणि वाक्यात वापरताना तो वाक्याचा भाग बनतो (उदा. 'बेत पक्का करणे'). याउलट, म्हण म्हणजे अनुभवावरून सुचलेले पूर्ण वाक्य असते, ज्यात एखादा बोध किंवा उपदेश असतो (उदा. 'एकावे जनाचे पण करावे मनाचे'). वाक्प्रचार आणि म्हणी भाषेची शोभा वाढवतात आणि बोलणे अधिक प्रभावी करतात. पाठात 'नाक मुरडणे', 'कान फुंकणे' यांसारखे वाक्प्रचार आणि 'पालथ्या घड्यावर पाणी', 'कामापुरता मामा' यांसारख्या म्हणींचे अर्थ व उदाहरणे दिली आहेत.",
+      "summaryEn": "Idioms add beauty to language. Understand common Marathi idioms and their meanings.",
+      "summaryMr": "वाक्प्रचार हे भाषेचे दागिने आहेत. शब्दांच्या मूळ अर्थापेक्षा वेगळा आणि अर्थपूर्ण अर्थ वाक्प्रचारांतून मिळतो.",
       "practiceQuestions": [
         {
-          "id": "q1",
-          "text": "'नाक मुरडणे' या वाक्प्रचाराचा योग्य अर्थ कोणता?",
-          "options": [
-            "स्तुती करणे",
-            "त्रास देणे",
-            "नापसंती दाखवणे",
-            "कौतुक करणे"
-          ],
+          "id": "5-1",
+          "text": "'नाक मुरडणे' या वाक्प्रचाराचा अर्थ काय?",
+          "options": ["नाक साफ करणे", "नापसंती दाखवणे", "खूप राग येणे", "हसणे"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "5-2",
+          "text": "'धडा शिकवणे' म्हणजे काय?",
+          "options": ["पुस्तकातून शिकणे", "शाळेत जाणे", "अद्दल घडवणे", "मदत करणे"],
           "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "पुस्तकानुसार, 'नाक मुरडणे' या वाक्प्रचाराचा अर्थ 'नापसंती दाखवणे' असा होतो."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q2",
-          "text": "'सर्व प्रयत्न निरुपयोगी ठरणे' या अर्थाची म्हण ओळखा.",
-          "options": [
-            "थेंबे थेंबे तळे साचे",
-            "पालथ्या घड्यावर पाणी",
-            "पेरावे तसे उगवते",
-            "कामापुरता मामा"
-          ],
-          "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "'पालथ्या घड्यावर पाणी' या म्हणीचा अर्थ केलेले सर्व प्रयत्न वाया जाणे किंवा निरुपयोगी ठरणे असा होतो."
-        },
-        {
-          "id": "q3",
-          "text": "'माशा मारणे' या वाक्प्रचाराचा अर्थ काय आहे?",
-          "options": [
-            "काहीही उद्योग न करणे",
-            "खूप कष्ट करणे",
-            "मासे पकडणे",
-            "वेळ वाया न घालवणे"
-          ],
+          "id": "5-3",
+          "text": "'गंमत पाहणे' या वाक्प्रचाराचा अर्थ सांगा.",
+          "options": ["मजा पाहणे", "काम करणे", "शांत बसणे", "दुःखी होणे"],
           "correctAnswer": 0,
-          "difficulty": Difficulty.EASY,
-          "explanation": "पाठात दिलेल्या माहितीनुसार, 'माशा मारणे' म्हणजे 'काहीही उद्योग न करणे' किंवा रिकामे बसणे."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q4",
-          "text": "खालीलपैकी कोणत्या वाक्प्रचाराचा अर्थ 'शिक्षा करणे' किंवा 'अद्दल घडवणे' असा होतो?",
-          "options": [
-            "दाद देणे",
-            "धडा शिकवणे",
-            "डोके खाणे",
-            "कान फुंकणे"
-          ],
+          "id": "5-4",
+          "text": "'कान फुंकणे' म्हणजे काय?",
+          "options": ["कान स्वच्छ करणे", "चुगली करणे", "मदत करणे", "हवा मारणे"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "'धडा शिकवणे' या वाक्प्रचाराचा अर्थ 'शिक्षा करणे' किंवा 'अद्दल घडवणे' असा आहे."
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q5",
-          "text": "'दोघांचे भांडण तिसऱ्याचा लाभ' या म्हणीचा अर्थ काय?",
-          "options": [
-            "तिसऱ्या व्यक्तीला नुकसान होणे",
-            "भांडण करणाऱ्यांचा फायदा होणे",
-            "दोघांनी मिळून तिसऱ्याला मदत करणे",
-            "भांडणाऱ्यांचा फायदा होत नाही, पण तिसऱ्याचा फायदा होतो"
-          ],
-          "correctAnswer": 3,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "या म्हणीचा अर्थ असा आहे की भांडण करणाऱ्यांचा कधीही फायदा होत नाही, तर तिसऱ्याचा कोणाचा तरी फायदा होतो."
+          "id": "5-5",
+          "text": "'कंबर कसणे' म्हणजे काय?",
+          "options": ["व्यायाम करणे", "पूर्ण तयारीत राहणे", "बसून राहणे", "दोरी बांधणे"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
         }
       ],
       "flashcards": [
-        {
-          "id": "fc1",
-          "front": "वाक्प्रचार: कामातून जाणे",
-          "back": "अर्थ: पूर्ण बिघडणे (To be ruined completely)"
-        },
-        {
-          "id": "fc2",
-          "front": "म्हण: एकावे जनाचे पण करावे मनाचे",
-          "back": "अर्थ: लोकांचे सल्ले जरूर एकावे पण शेवटी आपल्याला पटेल तोच निर्णय घ्यावा."
-        },
-        {
-          "id": "fc3",
-          "front": "वाक्प्रचार: कान फुंकणे",
-          "back": "अर्थ: मनात भरवून देणे / चहाडी करणे (To instigate or tell tales)"
-        },
-        {
-          "id": "fc4",
-          "front": "म्हण: पेरावे तसे उगवते",
-          "back": "अर्थ: आपण जसे करतो तसेच त्याचे फळ मिळते (As you sow, so shall you reap)"
-        },
-        {
-          "id": "fc5",
-          "front": "वाक्प्रचार: रंगून जाणे",
-          "back": "अर्थ: गुंग होणे / मग्न होणे (To be engrossed)"
-        }
+        { "id": "5-f1", "front": "हातभार लावणे", "back": "मदत करणे." },
+        { "id": "5-f2", "front": "पायावर उभे राहणे", "back": "स्वावलंबी होणे." },
+        { "id": "5-f3", "front": "तोंडात बोट घालणे", "back": "आश्चर्यचकित होणे." },
+        { "id": "5-f4", "front": "घाम गाळणे", "back": "खूप कष्ट करणे." },
+        { "id": "5-f5", "front": "गगन ठेंगणे होणे", "back": "खूप आनंद होणे." }
       ]
     },
     {
       "id": "6",
-      "title": "अंक आणि आकडेमोड",
+      "title": "अंक आणि आकडेमोड (Numbers)",
       "isLoaded": true,
-      "summaryEn": "The chapter 'Numbers and Calculations' (Ank ani Aakademod) explores the foundational concepts of mathematics, highlighting how numbers are used in daily life for measurements, scores, and recipes. It acknowledges the historical contribution of the Indian mathematician Aryabhata, who discovered zero and the decimal system around 500 A.D. The text details the place value system ranging from units to ten million (Koti) and defines core arithmetic operations: addition (Berij), subtraction (Vajabaki), multiplication (Gunakar), and division (Bhagakar). Additionally, it introduces financial terms like profit, loss, and tax, as well as specific Marathi vocabulary for multipliers (like 'duppat' for double) and fractions (like 'nimme' for half), concluding with practical word problems.",
-      "summaryMr": "'अंक आणि आकडेमोड' या पाठात गणिताची आणि संख्यांची ओळख करून देण्यात आली आहे. दैनंदिन जीवनात मोजमाप, खेळांचे गुण आणि पाककृतींमध्ये अंकांचा वापर कसा होतो हे यात सांगितले आहे. इ.स. ५०० मध्ये आर्यभट नावाच्या गणितज्ञाने शून्य आणि दशमान पद्धतीचा शोध लावला, अशी ऐतिहासिक माहिती यात दिली आहे. पाठात एकक, दशक, शतक ते कोटीपर्यंतच्या स्थानकिंमतींची माहिती तसेच बेरीज, वजाबाकी, गुणाकार आणि भागाकार या मूलभूत क्रियांचे स्पष्टीकरण दिले आहे. याशिवाय टक्केवारी, नफा-तोटा, खरेदी-विक्री यांसारखे शब्द आणि 'दुप्पट' किंवा 'निम्मे' यांसारख्या शब्दांचा अर्थ समजावून सांगून शाब्दिक उदाहरणांचा सराव घेतला आहे.",
+      "summaryEn": "Practice Marathi numbers from 1 to 100 and basic arithmetic terms.",
+      "summaryMr": "गणिताच्या क्रिया आणि संख्यांची ओळख असणे दैनंदिन व्यवहारासाठी आवश्यक आहे. १ ते १०० अंक आणि बेरीज-वजाबाकी शिकूया.",
       "practiceQuestions": [
         {
-          "id": "q1",
-          "text": "शून्य आणि दशमान संख्या पद्धतीचा शोध कोणी लावला?",
-          "options": [
-            "भास्कराचार्य",
-            "आर्यभट",
-            "रामानुजन",
-            "शिवाजी महाराज"
-          ],
-          "correctAnswer": 1,
-          "difficulty": Difficulty.EASY,
-          "explanation": "पाठात नमूद केल्याप्रमाणे, इ.स. ५०० मध्ये आर्यभट नावाच्या गणितज्ञाने शून्य आणि दशमान संख्या पद्धतीचा शोध लावला."
+          "id": "6-1",
+          "text": "मराठीत ९९ ला काय म्हणतात?",
+          "options": ["ऐंशी", "नव्वद", "नव्याण्णव", "एकशे नऊ"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q2",
-          "text": "इंग्रजीतील 'Division' या शब्दासाठी मराठीत कोणता शब्द वापरला जातो?",
-          "options": [
-            "बेरीज",
-            "गुणाकार",
-            "वजाबाकी",
-            "भागाकार"
-          ],
+          "id": "6-2",
+          "text": "'Addition' ला मराठीत काय म्हणतात?",
+          "options": ["वजाबाकी", "गुणाकार", "भागाकार", "बेरीज"],
           "correctAnswer": 3,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "पाठातील माहितीनुसार Division म्हणजे भागाकार होय."
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "q3",
-          "text": "मराठीत 'दुप्पट' म्हणजे किती पट?",
-          "options": [
-            "x ३",
-            "x २",
-            "x ४",
-            "x १०"
-          ],
+          "id": "6-3",
+          "text": "दहा लाख म्हणजे किती?",
+          "options": ["१ कोटी", "१ मिलियन", "१ बिलियन", "१ लाख"],
           "correctAnswer": 1,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "मराठी बोली भाषेत दुप्पट म्हणजे x २ (दोन पट) असे मानले जाते."
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q4",
-          "text": "खालीलपैकी कोणत्या संख्येला 'Ten Million' असे म्हणतात?",
-          "options": [
-            "एक लाख",
-            "दहा लाख",
-            "एक कोटी",
-            "एक हजार"
-          ],
-          "correctAnswer": 2,
-          "difficulty": Difficulty.HARD,
-          "explanation": "दिलेल्या तक्त्यानुसार (Table), एक कोटी म्हणजे Ten Million होय."
+          "id": "6-4",
+          "text": "शून्याचा शोध कोणी लावला?",
+          "options": ["आर्यभट्ट", "भास्कराचार्य", "न्यूटन", "आईन्स्टाईन"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "q5",
-          "text": "संख्येचा प्रत्येक १०० चा एक भाग म्हणजे काय?",
-          "options": [
-            "वजाबाकी",
-            "गुणाकार",
-            "टक्केवारी",
-            "दशमान"
-          ],
+          "id": "6-5",
+          "text": "७५ अधिक २५ किती होतात?",
+          "options": ["८०", "९०", "१००", "१२०"],
           "correctAnswer": 2,
-          "difficulty": Difficulty.MEDIUM,
-          "explanation": "कुठल्याही संख्येचा प्रत्येक १०० चा एक भाग म्हणजे टक्केवारी (Percentage) होय."
+          "difficulty": Difficulty.MEDIUM
         }
       ],
       "flashcards": [
+        { "id": "6-f1", "front": "पाऊण", "back": "७५ टक्के (3/4)." },
+        { "id": "6-f2", "front": "सव्वा", "back": "१ पूर्णांक १/४ (1.25)." },
+        { "id": "6-f3", "front": "गुणाकार", "back": "Multiplication." },
+        { "id": "6-f4", "front": "भागाकार", "back": "Division." },
+        { "id": "6-f5", "front": "दशक", "back": "१० ची संख्या (Ten)." }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "भारताचे राष्ट्रीय सण (National Festivals)",
+      "isLoaded": true,
+      "summaryEn": "India celebrates major national festivals like Independence Day and Republic Day to honor its history.",
+      "summaryMr": "भारत हा विविधतेने नटलेला देश आहे. १५ ऑगस्ट आणि २६ जानेवारी हे आपले राष्ट्रीय सण आपण उत्साहात साजरे करतो.",
+      "practiceQuestions": [
         {
-          "id": "f1",
-          "front": "आर्यभट (Aryabhata)",
-          "back": "प्राचीन भारतीय गणितज्ञ ज्यांनी शून्य आणि दशमान संख्या पद्धतीचा शोध लावला."
+          "id": "7-1",
+          "text": "भारताचा स्वातंत्र्यदिन कधी असतो?",
+          "options": ["२६ जानेवारी", "१ मे", "१५ ऑगस्ट", "२ ऑक्टोबर"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "f2",
-          "front": "निम्मे (Nimme)",
-          "back": "अर्धा भाग किंवा ५०% (Half)."
+          "id": "7-2",
+          "text": "प्रजासत्ताक दिन कधी साजरा केला जातो?",
+          "options": ["२६ जानेवारी", "१५ ऑगस्ट", "५ सप्टेंबर", "१४ नोव्हेंबर"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.EASY
         },
         {
-          "id": "f3",
-          "front": "वजाबाकी (Vajabaki)",
-          "back": "Subtraction."
+          "id": "7-3",
+          "text": "लाल किल्ल्यावर राष्ट्रध्वज कोण फडकवतात?",
+          "options": ["राष्ट्रपती", "पंतप्रधान", "राज्यपाल", "मुख्यमंत्री"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "f4",
-          "front": "नफा (Nafa)",
-          "back": "Profit / फायदा."
+          "id": "7-4",
+          "text": "गांधी जयंती कधी असते?",
+          "options": ["१५ ऑगस्ट", "२६ जानेवारी", "२ ऑक्टोबर", "१ मे"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.MEDIUM
         },
         {
-          "id": "f5",
-          "front": "एक कोटी (Ek Koti)",
-          "back": "Ten Million (1,00,00,000)."
+          "id": "7-5",
+          "text": "आपल्या राष्ट्रध्वजात किती रंग आहेत?",
+          "options": ["दोन", "तीन", "चार", "पाच"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
         }
+      ],
+      "flashcards": [
+        { "id": "7-f1", "front": "तिरंगा", "back": "भारताचा राष्ट्रध्वज." },
+        { "id": "7-f2", "front": "अशोकचक्र", "back": "ध्वजाच्या मध्यभागी असलेले निळे चक्र." },
+        { "id": "7-f3", "front": "लाल किल्ला", "back": "दिल्ली येथील ऐतिहासिक ठिकाण." },
+        { "id": "7-f4", "front": "स्वातंत्र्य", "back": "Independence." },
+        { "id": "7-f5", "front": "राष्ट्रगीत", "back": "जन गण मन." }
+      ]
+    },
+    {
+      "id": "8",
+      "title": "शिवनेरी किल्ला (Shivneri Fort)",
+      "isLoaded": true,
+      "summaryEn": "The historic birthplace of Chhatrapati Shivaji Maharaj, located near Junnar.",
+      "summaryMr": "शिवनेरी हा जुन्नर जवळील एक ऐतिहासिक किल्ला आहे. येथेच छत्रपती शिवाजी महाराजांचा जन्म झाला.",
+      "practiceQuestions": [
+        {
+          "id": "8-1",
+          "text": "शिवाजी महाराजांचा जन्म कोणत्या किल्ल्यावर झाला?",
+          "options": ["रायगड", "प्रतापगड", "शिवनेरी", "सिंहगड"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "8-2",
+          "text": "शिवनेरी किल्ला कोणत्या जिल्ह्यात आहे?",
+          "options": ["ठाणे", "पुणे", "सातारा", "कोल्हापूर"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "8-3",
+          "text": "शिवनेरी किल्ल्यावर कोणत्या देवीचे मंदिर आहे?",
+          "options": ["भवानी माता", "शिवाई देवी", "तुळजापूरची अंबाबाई", "काळुबाई"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "8-4",
+          "text": "शिवनेरी किल्ला कोणत्या डोंगरात आहे?",
+          "options": ["सह्याद्री", "सातपुडा", "अरवली", "हिमालय"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "8-5",
+          "text": "जुन्नर हे शहर कोणत्या जिल्ह्याचा भाग आहे?",
+          "options": ["नागपूर", "पुणे", "मुंबई", "सोलापूर"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        }
+      ],
+      "flashcards": [
+        { "id": "8-f1", "front": "किल्लेदार", "back": "किल्ल्याचे रक्षण करणारा प्रमुख." },
+        { "id": "8-f2", "front": "जुन्नर", "back": "शिवनेरी जवळचे ऐतिहासिक शहर." },
+        { "id": "8-f3", "front": "शिवाई देवी", "back": "महाराजांचे नाव या देवीवरून ठेवले गेले." },
+        { "id": "8-f4", "front": "१९ फेब्रुवारी १६३०", "back": "शिवाजी महाराजांचा जन्मदिवस." },
+        { "id": "8-f5", "front": "तटबंदी", "back": "किल्ल्याच्या संरक्षणासाठी बांधलेली भिंत." }
+      ]
+    },
+    {
+      "id": "9",
+      "title": "झाडे लावा, झाडे जगवा (Nature)",
+      "isLoaded": true,
+      "summaryEn": "Importance of trees for oxygen, rain, and maintaining environmental balance.",
+      "summaryMr": "झाडे आपल्याला ऑक्सिजन देतात आणि पाऊस पाडण्यास मदत करतात. पर्यावरणाचे रक्षण करण्यासाठी झाडे लावणे गरजेचे आहे.",
+      "practiceQuestions": [
+        {
+          "id": "9-1",
+          "text": "झाडे आपल्याला कोणता वायू देतात?",
+          "options": ["नायट्रोजन", "ऑक्सिजन", "कार्बन डायऑक्साइड", "हायड्रोजन"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "9-2",
+          "text": "पाऊस पडण्यासाठी कशाची गरज असते?",
+          "options": ["गाड्यांची", "झाडांची", "विमानांची", "मोबाईलची"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "9-3",
+          "text": "झाडे कार्बन डायऑक्साइड शोषून काय बाहेर सोडतात?",
+          "options": ["दूध", "अन्न", "ऑक्सिजन", "पाणी"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "9-4",
+          "text": "वनमहोत्सव कधी साजरा केला जातो?",
+          "options": ["जून", "जुलै", "ऑगस्ट", "मे"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "9-5",
+          "text": "झाडांमुळे कशाची धूप थांबते?",
+          "options": ["लोखंडाची", "पाण्याची", "मातीची", "काचेची"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.MEDIUM
+        }
+      ],
+      "flashcards": [
+        { "id": "9-f1", "front": "ऑक्सिजन", "back": "प्राणवायू." },
+        { "id": "9-f2", "front": "बाष्पीभवन", "back": "पाण्याची वाफ होण्याची क्रिया." },
+        { "id": "9-f3", "front": "पर्यावरण", "back": "Environment." },
+        { "id": "9-f4", "front": "बीजारोपण", "back": "बिया पेरण्याची क्रिया." },
+        { "id": "9-f5", "front": "संवर्धन", "back": "जतन करणे किंवा रक्षण करणे." }
+      ]
+    },
+    {
+      "id": "10",
+      "title": "सावित्रीबाई फुले (Savitribai Phule)",
+      "isLoaded": true,
+      "summaryEn": "The first female teacher in India and a pioneer of women's education in Maharashtra.",
+      "summaryMr": "क्रांतीज्योती सावित्रीबाई फुले या भारताच्या पहिल्या महिला शिक्षिका होत्या. त्यांनी स्त्रियांच्या शिक्षणासाठी मोठे कार्य केले.",
+      "practiceQuestions": [
+        {
+          "id": "10-1",
+          "text": "भारताच्या पहिल्या महिला शिक्षिका कोण?",
+          "options": ["इंदिरा गांधी", "सरोजिनी नायडू", "सावित्रीबाई फुले", "झाशीची राणी"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "10-2",
+          "text": "सावित्रीबाईंच्या पतीचे नाव काय होते?",
+          "options": ["जोतिराव फुले", "शाहू महाराज", "न्यायमूर्ती रानडे", "लोकमान्य टिळक"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "10-3",
+          "text": "मुलींची पहिली शाळा कोठे सुरू झाली?",
+          "options": ["मुंबई", "पुणे", "नाशिक", "नागपूर"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "10-4",
+          "text": "पुण्यातील कोणत्या वाड्यात पहिली शाळा सुरू झाली?",
+          "options": ["शनिवारवाडा", "भिडे वाडा", "विश्रामबाग वाडा", "लाल महाल"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "10-5",
+          "text": "सावित्रीबाईंचा जन्मदिवस काय म्हणून साजरा होतो?",
+          "options": ["शिक्षक दिन", "बालिका दिन", "महिला दिन", "स्वच्छता दिन"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        }
+      ],
+      "flashcards": [
+        { "id": "10-f1", "front": "भिडे वाडा", "back": "मुलींची पहिली शाळा सुरू झालेली जागा." },
+        { "id": "10-f2", "front": "क्रांतीज्योती", "back": "सावित्रीबाईंना दिलेली उपाधी." },
+        { "id": "10-f3", "front": "३ जानेवारी", "back": "सावित्रीबाईंचा जन्मदिवस." },
+        { "id": "10-f4", "front": "स्त्री शिक्षण", "back": "Women's Education." },
+        { "id": "10-f5", "front": "सत्यशोधक समाज", "back": "फुले दांपत्याने स्थापन केलेली संस्था." }
+      ]
+    },
+    {
+      "id": "11",
+      "title": "पाण्याचे महत्त्व (Water)",
+      "isLoaded": true,
+      "summaryEn": "Water is life. Learn why we must save water and the sources of fresh water.",
+      "summaryMr": "पाणी हे जीवन आहे. पिण्याचे पाणी जपून वापरणे आणि पाण्याचा अपव्यय टाळणे ही आपली जबाबदारी आहे.",
+      "practiceQuestions": [
+        {
+          "id": "11-1",
+          "text": "पाण्याचा मुख्य स्रोत कोणता आहे?",
+          "options": ["नदी", "विहीर", "पाऊस", "समुद्र"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "11-2",
+          "text": "पिण्याचे पाणी कसे असावे?",
+          "options": ["कडू", "स्वच्छ आणि निर्जंतुक", "खाऱ्या चवीचे", "रंगीत"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "11-3",
+          "text": "पाणी गरम केल्यावर त्याची काय होते?",
+          "options": ["बर्फ", "वाफ", "दगड", "दूध"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "11-4",
+          "text": "पृथ्वीचा किती भाग पाण्याने व्यापलेला आहे?",
+          "options": ["२५%", "५०%", "७१%", "९०%"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "11-5",
+          "text": "जागतिक जल दिन कधी साजरा केला जातो?",
+          "options": ["२२ मार्च", "५ जून", "१५ ऑगस्ट", "१ जानेवारी"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.HARD
+        }
+      ],
+      "flashcards": [
+        { "id": "11-f1", "front": "जीवन", "back": "पाण्याला दिलेले दुसरे नाव." },
+        { "id": "11-f2", "front": "प्रदूषण", "back": "पाणी अस्वच्छ होण्याची क्रिया." },
+        { "id": "11-f3", "front": "धरण", "back": "पाणी साठवण्यासाठी बांधलेली भिंत." },
+        { "id": "11-f4", "front": "कंजर्वेशन", "back": "पाणी वाचवणे (Conservation)." },
+        { "id": "11-f5", "front": "बाष्प", "back": "पाण्याची वाफ (Vapor)." }
+      ]
+    },
+    {
+      "id": "12",
+      "title": "आपले सोबती - प्राणी (Animals)",
+      "isLoaded": true,
+      "summaryEn": "Introduction to domestic and wild animals and their role in nature.",
+      "summaryMr": "प्राणी आपले मित्र आहेत. पाळीव प्राणी आपल्याला मदत करतात तर जंगली प्राणी जंगलाचे रक्षण करतात.",
+      "practiceQuestions": [
+        {
+          "id": "12-1",
+          "text": "भारताचा राष्ट्रीय प्राणी कोणता?",
+          "options": ["सिंह", "हत्ती", "वाघ", "बिबट्या"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "12-2",
+          "text": "खालीलपैकी कोणता पाळीव प्राणी आहे?",
+          "options": ["कोल्हा", "गाय", "लांडगा", "अस्वल"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "12-3",
+          "text": "वाघाच्या पिल्लाला काय म्हणतात?",
+          "options": ["वासरू", "कोकरू", "बछडा", "रेडू"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "12-4",
+          "text": "सर्वात बुद्धिमान जलचर प्राणी कोणता मानला जातो?",
+          "options": ["मगर", "मासा", "डॉल्फिन", "कासव"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "12-5",
+          "text": "शेतकऱ्याचा मित्र कोणाला म्हणतात?",
+          "options": ["साप", "बैल", "गांडूळ", "वरील सर्व"],
+          "correctAnswer": 3,
+          "difficulty": Difficulty.MEDIUM
+        }
+      ],
+      "flashcards": [
+        { "id": "12-f1", "front": "अभयारण्य", "back": "प्राण्यांसाठी राखीव असलेले जंगल." },
+        { "id": "12-f2", "front": "पाळीव प्राणी", "back": "घरात पाळले जाणारे प्राणी." },
+        { "id": "12-f3", "front": "हिंस्र", "back": "जंगली किंवा शिकारी प्राणी." },
+        { "id": "12-f4", "front": "पक्षी", "back": "आकाशात उडणारे प्राणी." },
+        { "id": "12-f5", "front": "अंडज", "back": "अंडी घालणारे प्राणी." }
+      ]
+    },
+    {
+      "id": "13",
+      "title": "डॉ. बाबासाहेब आंबेडकर (Dr. Ambedkar)",
+      "isLoaded": true,
+      "summaryEn": "The architect of the Indian Constitution and a champion of human rights.",
+      "summaryMr": "डॉ. बाबासाहेब आंबेडकर हे भारतीय राज्यघटनेचे शिल्पकार आहेत. त्यांनी समतेसाठी मोठे आंदोलन केले.",
+      "practiceQuestions": [
+        {
+          "id": "13-1",
+          "text": "भारतीय राज्यघटनेचे शिल्पकार कोण?",
+          "options": ["नेहरू", "गांधी", "डॉ. आंबेडकर", "पटेल"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "13-2",
+          "text": "डॉ. आंबेडकरांचा जन्म कोठे झाला?",
+          "options": ["मुंबई", "महू (मध्य प्रदेश)", "नागपूर", "रत्नागिरी"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "13-3",
+          "text": "चवदार तळ्याचे सत्याग्रह कोठे झाले?",
+          "options": ["नाशिक", "महाड", "पुणे", "सातारा"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "13-4",
+          "text": "आंबेडकरांनी बौद्ध धर्म कोठे स्वीकारला?",
+          "options": ["नागपूर", "मुंबई", "सारनाथ", "गया"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.HARD
+        },
+        {
+          "id": "13-5",
+          "text": "डॉ. आंबेडकरांना कोणता सर्वोच्च किताब मिळाला आहे?",
+          "options": ["पद्मश्री", "भारतरत्न", "ज्ञानपीठ", "अर्जुन पुरस्कार"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        }
+      ],
+      "flashcards": [
+        { "id": "13-f1", "front": "राज्यघटना", "back": "भारताचा सर्वोच्च कायदा (Constitution)." },
+        { "id": "13-f2", "front": "१४ एप्रिल", "back": "आंबेडकर जयंती." },
+        { "id": "13-f3", "front": "बौद्ध धर्म", "back": "आंबेडकरांनी स्वीकारलेला धर्म." },
+        { "id": "13-f4", "front": "दलित उद्धार", "back": "दलितांच्या हक्कांसाठी केलेले कार्य." },
+        { "id": "13-f5", "front": "उच्च शिक्षण", "back": "त्यांनी परदेशात जाऊन मिळवलेली पदवी." }
+      ]
+    },
+    {
+      "id": "14",
+      "title": "व्यायाम आणि आरोग्य (Health)",
+      "isLoaded": true,
+      "summaryEn": "Exercise is crucial for a healthy body and mind. Learn simple yoga and activities.",
+      "summaryMr": "निरोगी शरीर आणि मनासाठी नियमित व्यायाम करणे आवश्यक आहे. योगासने आणि खेळ यामुळे आरोग्य सुधारते.",
+      "practiceQuestions": [
+        {
+          "id": "14-1",
+          "text": "व्यायाम केल्यामुळे काय वाढते?",
+          "options": ["आळस", "रोग", "प्रतिकारशक्ती आणि शक्ती", "वजन"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "14-2",
+          "text": "योगासनांची सुरुवात कोणत्या दिवशी साजरी केली जाते?",
+          "options": ["१५ ऑगस्ट", "२१ जून", "१ मे", "२ ऑक्टोबर"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "14-3",
+          "text": "मैदानी खेळ खेळल्यामुळे काय होते?",
+          "options": ["वेळ वाया जातो", "शरीर चपळ बनते", "थकवा येतो", "काहीच नाही"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "14-4",
+          "text": "निरोगी राहण्यासाठी किती तास झोप आवश्यक आहे?",
+          "options": ["२ तास", "४ तास", "७ ते ८ तास", "१२ तास"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "14-5",
+          "text": "सूर्य नमस्कारात किती स्थिती असतात?",
+          "options": ["५", "१०", "१२", "१५"],
+          "correctAnswer": 2,
+          "difficulty": Difficulty.HARD
+        }
+      ],
+      "flashcards": [
+        { "id": "14-f1", "front": "योगासने", "back": "शारीरिक आणि मानसिक व्यायाम." },
+        { "id": "14-f2", "front": "मैदानी खेळ", "back": "खो-खो, कबड्डी, फुटबॉल इ." },
+        { "id": "14-f3", "front": "प्रतिकारशक्ती", "back": "रोगांशी लढण्याची ताकद." },
+        { "id": "14-f4", "front": "संतुलित आहार", "back": "Balanced Diet." },
+        { "id": "14-f5", "front": "प्राणायाम", "back": "श्वासावर नियंत्रण ठेवण्याचा व्यायाम." }
+      ]
+    },
+    {
+      "id": "15",
+      "title": "अंतराळ सफर (Space)",
+      "isLoaded": true,
+      "summaryEn": "A journey through the stars and planets. Learn about Indian space missions.",
+      "summaryMr": "आकाश, ग्रह आणि तारे यांची माहिती मनोरंजक असते. भारताच्या चांद्रयान मोहिमेबद्दल अधिक जाणून घेऊया.",
+      "practiceQuestions": [
+        {
+          "id": "15-1",
+          "text": "आपल्या सूर्यमालेत किती मुख्य ग्रह आहेत?",
+          "options": ["७", "८", "९", "१०"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "15-2",
+          "text": "अंतराळात जाणारे पहिले भारतीय कोण?",
+          "options": ["राकेश शर्मा", "कल्पना चावला", "सुनीता विल्यम्स", "विक्रम साराभाई"],
+          "correctAnswer": 0,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "15-3",
+          "text": "भारताची अंतराळ संशोधन संस्था कोणती?",
+          "options": ["NASA", "ISRO", "DRDO", "BARC"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.EASY
+        },
+        {
+          "id": "15-4",
+          "text": "चंद्रावर जाणारे पहिले मानव कोण?",
+          "options": ["युरि गागारिन", "नील आर्मस्ट्राँग", "राकेश शर्मा", "बझ एल्ड्रिन"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.MEDIUM
+        },
+        {
+          "id": "15-5",
+          "text": "भारताच्या चांद्रयान-३ चे यशस्वी लँडिंग कोठे झाले?",
+          "options": ["चंद्राचा उत्तर ध्रुव", "चंद्राचा दक्षिण ध्रुव", "मंगळ", "शुक्र"],
+          "correctAnswer": 1,
+          "difficulty": Difficulty.HARD
+        }
+      ],
+      "flashcards": [
+        { "id": "15-f1", "front": "इस्रो (ISRO)", "back": "भारतीय अंतराळ संशोधन संस्था." },
+        { "id": "15-f2", "front": "उपग्रह", "back": "Satellite." },
+        { "id": "15-f3", "front": "चांद्रयान", "back": "भारताची चंद्र मोहीम." },
+        { "id": "15-f4", "front": "मंगळयान", "back": "मंगळ ग्रहावर गेलेले भारताचे यान." },
+        { "id": "15-f5", "front": "आकाशगंगा", "back": "तारांचा समूह (Galaxy)." }
       ]
     }
   ],
   "grandQuiz": [
-    {
-      "id": "1",
-      "text": "संत ज्ञानेश्वरांचा जन्म कोठे झाला?",
-      "options": [
-        "देहू",
-        "आळंदी",
-        "आपंगाव (पैठण)",
-        "पुणे"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ४१ वर स्पष्ट दिले आहे की संत ज्ञानेश्वरांचा जन्म आपेगाव (पैठण) येथे झाला."
-    },
-    {
-      "id": "2",
-      "text": "संत तुकाराम महाराजांचे गाव कोणते होते?",
-      "options": [
-        "देहू",
-        "आळंदी",
-        "पैठण",
-        "नेवासा"
-      ],
-      "correctAnswer": 0,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ४५ नुसार, संत तुकारामांचा जन्म देहू येथे झाला."
-    },
-    {
-      "id": "3",
-      "text": "महाराष्ट्राची राजधानी कोणती आहे?",
-      "options": [
-        "पुणे",
-        "नागपूर",
-        "मुंबई",
-        "नाशिक"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ५१ वर नमूद केले आहे की 'मुंबई ही महाराष्ट्राची राजधानी आहे'."
-    },
-    {
-      "id": "4",
-      "text": "मराठीत '100' (Hundred) या संख्येला काय म्हणतात?",
-      "options": [
-        "दहा",
-        "हजार",
-        "शंभर",
-        "लाख"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान २० वरील तक्त्यानुसार '100' ला मराठीत 'शंभर' म्हणतात."
-    },
-    {
-      "id": "5",
-      "text": "नागपूर हे शहर कोणत्या फळासाठी प्रसिद्ध आहे?",
-      "options": [
-        "आंबा",
-        "संत्री",
-        "द्राक्षे",
-        "केळी"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ५२ वर 'नागपूरची संत्री' असा उल्लेख आहे."
-    },
-    {
-      "id": "6",
-      "text": "पूर्ण विराम (Full stop) दर्शवणारे चिन्ह कोणते?",
-      "options": [
-        ",",
-        ";",
-        "?",
-        "."
-      ],
-      "correctAnswer": 3,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ३३ वरील तक्त्यात पूर्ण विराम (.) असा दर्शवला आहे."
-    },
-    {
-      "id": "7",
-      "text": "'अमृतानुभव' हा ग्रंथ कोणी लिहिला?",
-      "options": [
-        "संत तुकाराम",
-        "संत ज्ञानेश्वर",
-        "संत नामदेव",
-        "संत एकनाथ"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ४१ वर दिले आहे की संत ज्ञानेश्वरांनी 'अमृतानुभव' व 'ज्ञानेश्वरी' हे ग्रंथ लिहिले."
-    },
-    {
-      "id": "8",
-      "text": "संत ज्ञानेश्वरांचे गुरु कोण होते?",
-      "options": [
-        "सोपानदेव",
-        "निवृत्तीनाथ",
-        "मुक्ताबाई",
-        "विठ्ठलपंत"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ४२ वर स्पष्ट उल्लेख आहे की निवृत्तीनाथ हे संत ज्ञानेश्वरांचे मोठे भाऊ व गुरु होते."
-    },
-    {
-      "id": "9",
-      "text": "'मराठी भाषा गौरव दिन' कधी साजरा केला जातो?",
-      "options": [
-        "१ मे",
-        "२७ फेब्रुवारी",
-        "१५ ऑगस्ट",
-        "२६ जानेवारी"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ५१ नुसार, कवी कुसुमाग्रजांच्या स्मृतिदिनानिमित्त २७ फेब्रुवारी हा दिवस 'मराठी भाषा गौरव दिन' म्हणून साजरा होतो."
-    },
-    {
-      "id": "10",
-      "text": "'मांडे' हा महाराष्ट्रातील एक _______ पदार्थ आहे.",
-      "options": [
-        "तिखट",
-        "खाण्याचा गोड",
-        "पेय",
-        "कडू"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.EASY,
-      "explanation": "पान ४२ वर दिले आहे: 'मांडे हा महाराष्ट्रातील एक खाण्याचा गोड पदार्थ आहे - पुरणपोळीसारखा'."
-    },
-    {
-      "id": "11",
-      "text": "खानदेशात कोणती बोलीभाषा बोलली जाते?",
-      "options": [
-        "मालवणी",
-        "कोकणी",
-        "अहिराणी",
-        "वऱ्हाडी"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ५३ वरील यादीनुसार, खानदेशातील जळगाव, नंदुरबार जिल्ह्यांत 'अहिराणी' बोलली जाते."
-    },
-    {
-      "id": "12",
-      "text": "'पालथ्या घड्यावर पाणी' या म्हणीचा अर्थ काय?",
-      "options": [
-        "खूप पाणी साठवणे",
-        "सर्व प्रयत्न निरुपयोगी ठरणे",
-        "घडा रिकामा करणे",
-        "हुशार होणे"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान १६ (किंवा तत्सम पानावरील तक्त्यामध्ये) 'पालथ्या घड्यावर पाणी'चा अर्थ 'सर्व प्रयत्न निरुपयोगी ठरणे' असा दिला आहे."
-    },
-    {
-      "id": "13",
-      "text": "अर्धविराम (Semi-colon) चिन्हासाठी योग्य पर्याय निवडा.",
-      "options": [
-        ",",
-        ";",
-        ":",
-        "-"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ३३ वरील तक्त्यात अर्धविराम (;) असा दाखवला आहे."
-    },
-    {
-      "id": "14",
-      "text": "संत तुकाराम हे कोणत्या राजाच्या काळात होऊन गेले?",
-      "options": [
-        "अकबर",
-        "संभाजी महाराज",
-        "शिवाजी महाराज",
-        "साहू महाराज"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ४५ वर उल्लेख आहे की 'त्यावेळी शिवाजी महाराज पण लढत होते', म्हणजेच ते समकालीन होते."
-    },
-    {
-      "id": "15",
-      "text": "संत ज्ञानेश्वरांनी कोठे समाधी घेतली?",
-      "options": [
-        "देहू",
-        "पंढरपूर",
-        "आळंदी",
-        "पैठण"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ४३ वर दिले आहे: 'महाराष्ट्रात आळंदी येथे त्यांचे मंदिर आहे' व त्यांनी वयाच्या २१ व्या वर्षी समाधी घेतली."
-    },
-    {
-      "id": "16",
-      "text": "एकावर पाच शून्य (१,००,०००) म्हणजे किती?",
-      "options": [
-        "दहा हजार",
-        "एक लाख",
-        "दहा लाख",
-        "एक कोटी"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान २० वरील तक्त्याप्रमाणे १,००,००० ला 'एक लाख' (One Hundred Thousand) म्हणतात."
-    },
-    {
-      "id": "17",
-      "text": "लोकांनी कोणत्या संतांना 'जगद्गुरू' असे म्हटले आहे?",
-      "options": [
-        "संत ज्ञानेश्वर",
-        "संत एकनाथ",
-        "संत नामदेव",
-        "संत तुकाराम"
-      ],
-      "correctAnswer": 3,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ४५ वर दिले आहे: 'लोक त्यांना जगद्गुरू असे म्हणत'."
-    },
-    {
-      "id": "18",
-      "text": "सांगली आणि नाशिक हे जिल्हे कोणत्या फळासाठी प्रसिद्ध आहेत?",
-      "options": [
-        "केळी",
-        "संत्री",
-        "द्राक्षे",
-        "बोरं"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ५२ वर दिले आहे: 'सांगलीची व नाशिकची द्राक्षे'."
-    },
-    {
-      "id": "19",
-      "text": "'डोके खाणे' या वाक्प्रचाराचा अर्थ काय?",
-      "options": [
-        "डोकं दुखणे",
-        "त्रास देणे",
-        "कौतुक करणे",
-        "गप्प बसणे"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान १४ वरील जोड्या लावा भागात 'डोके खाणे' म्हणजे 'त्रास देणे' अशी जोडी आहे."
-    },
-    {
-      "id": "20",
-      "text": "संत ज्ञानेश्वरांच्या बहिणीचे नाव काय होते?",
-      "options": [
-        "जनाबाई",
-        "कान्होपात्रा",
-        "मुक्ताबाई",
-        "बहिणाबाई"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.MEDIUM,
-      "explanation": "पान ४१ वर दिले आहे: 'त्यांना एक बहीण पण होती. तिचे नाव मुक्ताबाई'."
-    },
-    {
-      "id": "21",
-      "text": "'वारकरी संप्रदाय' म्हणजे काय?",
-      "options": [
-        "विष्णूची भक्ती करणारे",
-        "विठ्ठल भक्ती करणारे",
-        "दत्ताची भक्ती करणारे",
-        "शिवाची भक्ती करणारे"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.HARD,
-      "explanation": "पान ४१ आणि Glossary (पान ४३) मध्ये दिले आहे की जे लोक विठ्ठल भक्ती करतात त्यांना वारकरी पंथातील लोक म्हणतात."
-    },
-    {
-      "id": "22",
-      "text": "ओळीच्या शेवटी शब्द अपूर्ण राहिल्यास कोणते चिन्ह वापरतात?",
-      "options": [
-        "अपसारण चिन्ह",
-        "संयोग चिन्ह",
-        "अवग्रह",
-        "उद्गार चिन्ह"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.HARD,
-      "explanation": "पान ३४ वरील तक्त्यात 'संयोग चिन्ह' (Hyphen) चा उपयोग 'ओळीच्या शेवटी शब्द अपूर्ण राहिल्यास' असा दिला आहे."
-    },
-    {
-      "id": "23",
-      "text": "पुस्तकात आर्यभट्ट यांचा उल्लेख कोणत्या शब्दाने केला आहे?",
-      "options": [
-        "खगोलशास्त्रज्ञ",
-        "गणितज्ञ",
-        "वैज्ञानिक",
-        "तत्वज्ञ"
-      ],
-      "correctAnswer": 1,
-      "difficulty": Difficulty.HARD,
-      "explanation": "पान २० वर आर्यभट्ट नावाचा एक 'गणितज्ञ' (Mathematician) होता असा उल्लेख आहे."
-    },
-    {
-      "id": "24",
-      "text": "'झाडीबोली' प्रामुख्याने कोणत्या जिल्ह्यांत बोलली जाते?",
-      "options": [
-        "ठाणे आणि रायगड",
-        "लातूर आणि उस्मानाबाद",
-        "गडचिरोली, चंद्रपूर, भंडारा",
-        "सिंधुदुर्ग आणि रत्नागिरी"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.HARD,
-      "explanation": "पान ५३ वरील तक्त्यानुसार 'झाडीबोली' ही गडचिरोली, चंद्रपूर आणि भंडारा जिल्ह्यांत बोलली जाते."
-    },
-    {
-      "id": "25",
-      "text": "जर एका छत्रीची किंमत ५ डॉलर्स आहे, तर १७ छत्र्यांची किंमत किती?",
-      "options": [
-        "७५ डॉलर्स",
-        "८० डॉलर्स",
-        "८५ डॉलर्स",
-        "९० डॉलर्स"
-      ],
-      "correctAnswer": 2,
-      "difficulty": Difficulty.HARD,
-      "explanation": "पान २२ वर हे उदाहरण दिले आहे. १७ x ५ = ८५."
-    }
+    { "id": "g-1", "text": "महाराष्ट्राची राजधानी कोणती?", "options": ["पुणे", "नागपूर", "मुंबई", "नाशिक"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-2", "text": "ज्ञानेश्वरांचे जन्मस्थान कोणते?", "options": ["आळंदी", "आपेगाव", "पैठण", "देहू"], "correctAnswer": 1, "difficulty": Difficulty.EASY },
+    { "id": "g-3", "text": "तुकाराम महाराज कोणत्या गावचे होते?", "options": ["देहू", "आळंदी", "नाशिक", "पैठण"], "correctAnswer": 0, "difficulty": Difficulty.EASY },
+    { "id": "g-4", "text": "भारताच्या पहिल्या महिला शिक्षिका कोण?", "options": ["सरोजिनी नायडू", "सावित्रीबाई फुले", "इंदिरा गांधी", "आनंदीबाई जोशी"], "correctAnswer": 1, "difficulty": Difficulty.EASY },
+    { "id": "g-5", "text": "भारतीय राज्यघटनेचे शिल्पकार कोणाला म्हणतात?", "options": ["नेहरू", "गांधी", "डॉ. आंबेडकर", "सरदार पटेल"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-6", "text": "महाराष्ट्र राज्याची स्थापना कधी झाली?", "options": ["१ मे १९६०", "१५ ऑगस्ट १९४७", "२६ जानेवारी १९५०", "१ मे १९५०"], "correctAnswer": 0, "difficulty": Difficulty.EASY },
+    { "id": "g-7", "text": "नागपूर शहर कोणत्या फळासाठी प्रसिद्ध आहे?", "options": ["आंबा", "द्राक्षे", "संत्री", "चिकू"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-8", "text": "भारताचा स्वातंत्र्यदिन कधी असतो?", "options": ["२६ जानेवारी", "१५ ऑगस्ट", "२ ऑक्टोबर", "१ मे"], "correctAnswer": 1, "difficulty": Difficulty.EASY },
+    { "id": "g-9", "text": "शिवाजी महाराजांचा जन्म कोठे झाला?", "options": ["रायगड", "प्रतापगड", "शिवनेरी", "सिंहगड"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-10", "text": "झाडे आपल्याला कोणता वायू देतात?", "options": ["कार्बन डायऑक्साइड", "नायट्रोजन", "ऑक्सिजन", "हायड्रोजन"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-11", "text": "मुलींची पहिली शाळा कोठे सुरू झाली?", "options": ["मुंबई", "नाशिक", "पुणे", "सातारा"], "correctAnswer": 2, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-12", "text": "पाण्याचा मुख्य स्रोत कोणता?", "options": ["नदी", "विहीर", "पाऊस", "धरण"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-13", "text": "भारताचा राष्ट्रीय प्राणी कोणता?", "options": ["सिंह", "वाघ", "हत्ती", "चित्ता"], "correctAnswer": 1, "difficulty": Difficulty.EASY },
+    { "id": "g-14", "text": "डॉ. आंबेडकरांचा जन्म कोठे झाला?", "options": ["मुंबई", "नागपूर", "महू", "रत्नागिरी"], "correctAnswer": 2, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-15", "text": "जागतिक योग दिन कधी असतो?", "options": ["१५ ऑगस्ट", "२१ जून", "१ मे", "५ सप्टेंबर"], "correctAnswer": 1, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-16", "text": "इस्रो (ISRO) ही संस्था कशाशी संबंधित आहे?", "options": ["शेती", "शिक्षण", "अंतराळ संशोधन", "खेळ"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-17", "text": "ज्ञानेश्वरांच्या मोठ्या भावाचे नाव काय होते?", "options": ["निवृत्तीनाथ", "सोपान", "मुक्ताबाई", "विठ्ठलपंत"], "correctAnswer": 0, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-18", "text": "तुकारामांच्या अभंग संग्रहाला काय म्हणतात?", "options": ["ज्ञानेश्वरी", "गाथा", "दासबोध", "भावार्थ दीपिका"], "correctAnswer": 1, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-19", "text": "प्रजासत्ताक दिन कधी साजरा केला जातो?", "options": ["१५ ऑगस्ट", "२६ जानेवारी", "१ मे", "१४ नोव्हेंबर"], "correctAnswer": 1, "difficulty": Difficulty.EASY },
+    { "id": "g-20", "text": "शिवनेरी किल्ला कोणत्या जिल्ह्यात आहे?", "options": ["सातारा", "पुणे", "रायगड", "कोल्हापूर"], "correctAnswer": 1, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-21", "text": "सावित्रीबाईंच्या पतीचे नाव काय होते?", "options": ["जोतिराव फुले", "शाहू महाराज", "आंबेडकर", "टिळक"], "correctAnswer": 0, "difficulty": Difficulty.EASY },
+    { "id": "g-22", "text": "जागतिक जल दिन कधी असतो?", "options": ["२२ मार्च", "५ जून", "१ मे", "१५ ऑगस्ट"], "correctAnswer": 0, "difficulty": Difficulty.HARD },
+    { "id": "g-23", "text": "शेतकऱ्याचा मित्र कोणाला म्हणतात?", "options": ["बैल", "साप", "गांडूळ", "वरील सर्व"], "correctAnswer": 3, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-24", "text": "चवदार तळ्याचा सत्याग्रह कोठे झाला?", "options": ["नाशिक", "महाड", "पुणे", "मुंबई"], "correctAnswer": 1, "difficulty": Difficulty.HARD },
+    { "id": "g-25", "text": "अंतराळात जाणारे पहिले भारतीय कोण?", "options": ["राकेश शर्मा", "कल्पना चावला", "सुनीता विल्यम्स", "अब्दुल कलाम"], "correctAnswer": 0, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-26", "text": "मराठीत ९९ ला काय म्हणतात?", "options": ["ऐंशी", "नव्वद", "नव्याण्णव", "एकशे नऊ"], "correctAnswer": 2, "difficulty": Difficulty.EASY },
+    { "id": "g-27", "text": "प्रश्न विचारण्यासाठी कोणते चिन्ह वापरतात?", "options": ["!", "?", ".", ","], "correctAnswer": 1, "difficulty": Difficulty.EASY },
+    { "id": "g-28", "text": "'नाक मुरडणे' वाक्प्रचाराचा अर्थ काय?", "options": ["हसणे", "रडणे", "नापसंती दाखवणे", "मदत करणे"], "correctAnswer": 2, "difficulty": Difficulty.MEDIUM },
+    { "id": "g-29", "text": "सूर्य नमस्कारात किती स्थिती असतात?", "options": ["५", "१०", "१२", "१५"], "correctAnswer": 2, "difficulty": Difficulty.HARD },
+    { "id": "g-30", "text": "मराठी राजभाषा दिन कधी असतो?", "options": ["१ मे", "२७ फेब्रुवारी", "१५ ऑगस्ट", "२६ जानेवारी"], "correctAnswer": 1, "difficulty": Difficulty.MEDIUM }
   ],
   "grandFlashcards": [
-    {
-      "id": "1",
-      "front": "संत ज्ञानेश्वरांचा जन्म कोठे आणि कधी झाला?",
-      "back": "आपेगाव (पैठण शहराजवळ) येथे शके ११९७ (इ. स. १२७५) मध्ये झाला."
-    },
-    {
-      "id": "2",
-      "front": "संत ज्ञानेश्वरांच्या भावंडांची नावे काय होती?",
-      "back": "निवृत्तीनाथ (मोठा भाऊ), सोपान (लहान भाऊ) आणि मुक्ताबाई (लहान बहीण)."
-    },
-    {
-      "id": "3",
-      "front": "संत ज्ञानेश्वरांनी लिहिलेले महत्त्वाचे ग्रंथ कोणते?",
-      "back": "ज्ञानेश्वरी (भावार्थ दीपिका), अमृतानुभव आणि चांगदेवपासष्टी."
-    },
-    {
-      "id": "4",
-      "front": "'वारकरी' संप्रदाय कोणाला म्हणतात?",
-      "back": "जे लोक विठ्ठलाची भक्ती करतात आणि पंढरपूरची वारी करतात, त्यांना वारकरी म्हणतात."
-    },
-    {
-      "id": "5",
-      "front": "संत ज्ञानेश्वरांनी रेड्याच्या मुखातून काय वदवून घेतले होते?",
-      "back": "वेद."
-    },
-    {
-      "id": "6",
-      "front": "संत ज्ञानेश्वरांनी वयाच्या कितव्या वर्षी समाधी घेतली?",
-      "back": "वयाच्या २२ व्या वर्षी (आळंदी येथे)."
-    },
-    {
-      "id": "7",
-      "front": "संत तुकाराम महाराजांचे पूर्ण नाव आणि जन्मगाव कोणते?",
-      "back": "नाव: तुकाराम बोल्होबा अंबिले. गाव: देहू (पुण्याजवळ)."
-    },
-    {
-      "id": "8",
-      "front": "लोक संत तुकाराम महाराजांना कोणत्या उपाधीने ओळखतात?",
-      "back": "जगद्गुरू."
-    },
-    {
-      "id": "9",
-      "front": "संत तुकारामांनी लिहिलेल्या अभंगांच्या संग्रहाला काय म्हणतात?",
-      "back": "संत तुकारामांची गाथा."
-    },
-    {
-      "id": "10",
-      "front": "महाराष्ट्र राज्याची स्थापना कधी झाली?",
-      "back": "१ मे १९६० रोजी."
-    },
-    {
-      "id": "11",
-      "front": "'मराठी राजभाषा दिन' कधी आणि का साजरा केला जातो?",
-      "back": "२७ फेब्रुवारी रोजी, कवी कुसुमाग्रज (वि. वा. शिरवाडकर) यांच्या जन्मदिवसानिमित्त."
-    },
-    {
-      "id": "12",
-      "front": "महाराष्ट्रातील प्रमुख नद्या कोणत्या आहेत?",
-      "back": "गोदावरी, कृष्णा, तापी, भीमा आणि कोकणातील नद्या."
-    },
-    {
-      "id": "13",
-      "front": "महाराष्ट्रातील खालील शहरे कोणत्या फळांसाठी प्रसिद्ध आहेत? \n१. नागपूर \n२. नाशिक \n३. जळगाव",
-      "back": "१. नागपूर - संत्री \n२. नाशिक - द्राक्षे \n३. जळगाव - केळी"
-    },
-    {
-      "id": "14",
-      "front": "कोकणातील कोणता आंबा जगभरात प्रसिद्ध आहे?",
-      "back": "हापूस आंबा."
-    },
-    {
-      "id": "15",
-      "front": "महाराष्ट्रातील आदिवासींची प्रसिद्ध चित्रकला कौनती?",
-      "back": "वारली चित्रकला."
-    },
-    {
-      "id": "16",
-      "front": "महाराष्ट्रातील प्रमुख बोलीभाषा कोणत्या?",
-      "back": "कोकणी, मालवणी, अहिराणी, वऱ्हाडी, मराठवाडी और कोल्हापुरी."
-    },
-    {
-      "id": "17",
-      "front": "लेखनात 'पूर्णविराम' (.) कधी वापरतात?",
-      "back": "जेव्हा एखादे वाक्य पूर्ण होते, तेव्हा शेवटी पूर्णविराम वापरतात."
-    },
-    {
-      "id": "18",
-      "front": "लेखनात 'उद्गारवाचक चिन्ह' (!) कधी वापरतात?",
-      "back": "मनातील आनंद, दुःख, भीती इत्यादी भावना व्यक्त करताना शब्दाच्या किंवा वाक्याच्या शेवटी."
-    },
-    {
-      "id": "19",
-      "front": "वाक्प्रचार: 'नाक मुरडणे' याच्या अर्थ काय?",
-      "back": "नापसंती दाखवणे."
-    },
-    {
-      "id": "20",
-      "front": "वाक्प्रचार: 'डोके खाणे' याचा अर्थ काय?",
-      "back": "दुसऱ्याला खूप बोलून त्रास देणे."
-    },
-    {
-      "id": "21",
-      "front": "म्हण: 'पालथ्या घड्यावर पाणी' याचा अर्थ काय?",
-      "back": "केलेले सर्व प्रयत्न वाया जाणे किंवा कितीही उपदेश केला तरी उपयोग न होणे."
-    },
-    {
-      "id": "22",
-      "front": "म्हण: 'काखेत कळसा गावाला वळसा' याचा अर्थ काय?",
-      "back": "एखादी वस्तू स्वतःजवळ असतानाही ती शोधण्यासाठी सर्वत्र फिरणे."
-    },
-    {
-      "id": "23",
-      "front": "गणितात 'शून्य' आणि 'दशमान पद्धती'चा शोध कोणी लावला?",
-      "back": "आर्यभट्ट."
-    },
-    {
-      "id": "24",
-      "front": "१ मिलियन (Million) म्हणजे किती लाख?",
-      "back": "१० लाख (10 Lakhs)."
-    },
-    {
-      "id": "25",
-      "front": "खालील गणिती संज्ञांचे मराठी अर्थ सांगा: \n1. Addition \n2. Subtraction \n3. Multiplication",
-      "back": "1. बेरीज \n2. वजाबाकी \n3. गुणाकार"
-    }
+    { "id": "gf-1", "front": "१ मे", "back": "महाराष्ट्र दिन." },
+    { "id": "gf-2", "front": "तिरंगा", "back": "भारताचा राष्ट्रध्वज." },
+    { "id": "gf-3", "front": "ज्ञानेश्वरी", "back": "संत ज्ञानेश्वरांचा ग्रंथ." },
+    { "id": "gf-4", "front": "देहू", "back": "संत तुकारामांचे गाव." },
+    { "id": "gf-5", "front": "इस्रो", "back": "भारताची अंतराळ संस्था." },
+    { "id": "gf-6", "front": "मुंबई", "back": "महाराष्ट्राची राजधानी." },
+    { "id": "gf-7", "front": "आपेगाव", "back": "ज्ञानेश्वरांचे जन्मस्थान." },
+    { "id": "gf-8", "front": "१५ ऑगस्ट", "back": "भारताचा स्वातंत्र्यदिन." },
+    { "id": "gf-9", "front": "शिवनेरी", "back": "शिवाजी महाराजांचे जन्मस्थान." },
+    { "id": "gf-10", "front": "ऑक्सिजन", "back": "झाडांकडून मिळणारा वायू." },
+    { "id": "gf-11", "front": "पुणे", "back": "मुलींची पहिली शाळा सुरू झालेले शहर." },
+    { "id": "gf-12", "front": "पाणी", "back": "सजीवांचे जीवन." },
+    { "id": "gf-13", "front": "वाघ", "back": "भारताचा राष्ट्रीय प्राणी." },
+    { "id": "gf-14", "front": "१४ एप्रिल", "back": "आंबेडकर जयंती." },
+    { "id": "gf-15", "front": "योगासने", "back": "शारीरिक आणि मानसिक व्यायाम." },
+    { "id": "gf-16", "front": "चांद्रयान", "back": "भारताची चंद्र मोहीम." },
+    { "id": "gf-17", "front": "अभंग", "back": "तुकारामांची काव्यरचना." },
+    { "id": "gf-18", "front": "२६ जानेवारी", "back": "प्रजासत्ताक दिन." },
+    { "id": "gf-19", "front": "सह्याद्री", "back": "महाराष्ट्रातील पर्वतरांग." },
+    { "id": "gf-20", "front": "सावित्रीबाई फुले", "back": "पहिल्या महिला शिक्षिका." },
+    { "id": "gf-21", "front": "पूर्णविराम", "back": "वाक्य संपल्यावर दिले जाणारे चिन्ह." },
+    { "id": "gf-22", "front": "हातभार लावणे", "back": "मदत करणे." },
+    { "id": "gf-23", "front": "बेरीज", "back": "अंकांची मिळवणी." },
+    { "id": "gf-24", "front": "अशोकचक्र", "back": "राष्ट्रध्वजाच्या मध्यभागी असलेले चक्र." },
+    { "id": "gf-25", "front": "राकेश शर्मा", "back": "पहिले भारतीय अंतराळवीर." },
+    { "id": "gf-26", "front": "२७ फेब्रुवारी", "back": "मराठी भाषा दिन." },
+    { "id": "gf-27", "front": "अहिराणी", "back": "खानदेशातील बोलीभाषा." },
+    { "id": "gf-28", "front": "गाथा", "back": "तुकारामांच्या अभंगांचा संग्रह." },
+    { "id": "gf-29", "front": "संजीवन समाधी", "back": "ज्ञानेश्वरांनी आळंदीत घेतलेली समाधी." },
+    { "id": "gf-30", "front": "क्रांतीज्योती", "back": "सावित्रीबाई फुले यांना दिलेली उपाधी." }
   ]
 };
