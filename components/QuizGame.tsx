@@ -5,10 +5,11 @@ import { Question } from '../types';
 interface QuizGameProps {
   questions: Question[];
   onComplete: (score: number) => void;
+  onCorrectAnswer?: () => void;
   title: string;
 }
 
-const QuizGame: React.FC<QuizGameProps> = ({ questions, onComplete, title }) => {
+const QuizGame: React.FC<QuizGameProps> = ({ questions, onComplete, onCorrectAnswer, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [score, setScore] = useState(0);
@@ -22,10 +23,10 @@ const QuizGame: React.FC<QuizGameProps> = ({ questions, onComplete, title }) => 
     setIsAnswered(true);
     if (index === currentQuestion.correctAnswer) {
       setScore(prev => prev + 1);
+      if (onCorrectAnswer) onCorrectAnswer();
     }
   };
 
-  // Fixed the handleNext function to correctly complete the quiz with the final score
   const handleNext = () => {
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(prev => prev + 1);
